@@ -1,0 +1,38 @@
+.response-comment__item {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 0 8px 0;
+}
+
+.response-comment__item .item__content {
+    flex: 1;
+}
+
+.response-comment__item .item__img img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin: 0 16px 0 0;
+}
+
+.item__content .item__user-name {
+    margin: 0 0 4px;
+}
+
+.item__content .item-content {
+    margin: 0 0 4px;
+}
+
+.item__content .item__btn {
+    display: flex;
+    align-items: center;
+    color: #909090;
+}
+
+.response-comment__item .btn__seting {
+    margin: 0 0 0 8px;
+}
+
+.item__content .item__btn .btn__item{
+    margin: 0 4px 0 0;
+}

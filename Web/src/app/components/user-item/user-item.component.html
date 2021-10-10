@@ -1,0 +1,24 @@
+<div
+    class="user-item"
+    (mousedown)="onMousedown()"
+    (mouseup)="onMouseup()"
+    (mouseover)="onMouseover()"
+    (mouseout)="onMouseout()"
+    (click)="onClick()"
+    [ngStyle]="{
+        'background-color': bgColor,
+        display: display ? 'flex' : 'none'
+    }"
+    [title]="user.name"
+>
+    <img class="user__img" [src]="user.linkImg" alt="" />
+    <div class="user__name">
+        {{ user.name }}
+    </div>
+    <div class="user__status">
+        <i
+            [ngClass]="handleClassStatus()"
+            [ngStyle]="{ color: color, 'font-size': fontsize }"
+        ></i>
+    </div>
+</div>

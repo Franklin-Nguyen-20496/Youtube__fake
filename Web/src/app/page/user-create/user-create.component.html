@@ -1,0 +1,46 @@
+<div class="user__header my-3">
+    <h3>CREATE YOUR USERS</h3>
+</div>
+
+<app-notify-request></app-notify-request>
+
+<div class="container">
+    <div class="user__create">
+        <form (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label for="userName" class="form-label">Name:</label>
+                <input type="text" class="form-control bg-dark text-white" id="userName" name="user.name"
+                    placeholder="name" [(ngModel)]="user.name" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="img" class="form-label">Link image</label>
+                <input type="text" class="form-control bg-dark text-white" id="img" name="user.linkImg"
+                    placeholder="link image" [(ngModel)]="user.linkImg" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="userPassword" class="form-label">Password</label>
+                <input type="password" class="form-control bg-dark text-white" id="userPassword" name="user.password"
+                    placeholder="password" [(ngModel)]="user.password" required />
+            </div>
+
+            <div class="user__nav">
+                <button type="submit" class="btn btn-primary">CREATE</button>
+                <div class="nav__item">
+                    <a routerLink="/logging">
+                        <button type="button" class="btn btn-secondary">
+                            LOGGING
+                        </button>
+                    </a>
+
+                    <a routerLink="/">
+                        <button type="button" class="btn btn-danger">
+                            HOME
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

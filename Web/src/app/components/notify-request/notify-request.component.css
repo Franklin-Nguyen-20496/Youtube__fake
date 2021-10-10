@@ -1,0 +1,22 @@
+.notify__container {
+    position: fixed;
+    bottom: 12px;
+    left: 12px;
+    max-width: 360px;
+
+    background-color: #202020;
+    animation: slideNotify ease 0.5s;
+}
+
+@keyframes slideNotify {
+    from {
+        transform: translateY(calc(100% + 12px));
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.notify__container p {
+    padding: 12px 16px;
+}

@@ -1,0 +1,79 @@
+<div class="user_menu" (click)="$event.stopPropagation()">
+    <app-user-btn (userClick)="UserClick($event)"></app-user-btn>
+
+    <div *ngIf="isShowUserMenu" class="user__container">
+        <div class="user__header">
+            <img [src]="user.linkImg" [alt]="user.name" />
+            <div class="user__information">
+                <p class="name">{{ user.name }}</p>
+                <a
+                    href="https://myaccount.google.com/u/0/?utm_source=YouTubeWeb&tab=rk&utm_medium=act&tab=rk&hl=vi"
+                    title="Quản lý Tài khoản Google của bạn"
+                >
+                    Quản lý Tài khoản Google của bạn
+                </a>
+            </div>
+        </div>
+
+        <div class="userMenu__container">
+            <div class="user__scrollbar">
+                <div class="user__item">
+                    <app-select-item
+                        title="Kênh của bạn"
+                        icon="fas fa-portrait"
+                    ></app-select-item>
+                    <app-select-item
+                        title="Giao dịch mua và gói thành viên"
+                        icon="fas fa-dollar-sign"
+                    ></app-select-item>
+                    <app-select-item
+                        title="YouTube Studio"
+                        icon="fas fa-cog"
+                    ></app-select-item>
+                    <app-select-item
+                        title="Chuyển đổi tài khoản"
+                        icon="fas fa-users-cog"
+                    ></app-select-item>
+                    <app-select-item
+                        title="Đăng xuất"
+                        icon="fas fa-sign-out-alt"
+                    ></app-select-item>
+                </div>
+                <div class="user__item">
+                    <app-select-item
+                        title="Giao diện: Tối"
+                        icon="fas fa-moon"
+                    ></app-select-item>
+                    <app-select-item
+                        title="Ngôn ngữ: Tiếng Việt"
+                        icon="fab fa-angular"
+                    ></app-select-item>
+                    <app-select-item
+                        title="Địa điểm: Việt Nam"
+                        icon="fas fa-globe"
+                    ></app-select-item>
+                    <app-select-item
+                        title="Cài đặt"
+                        icon="fas fa-cog"
+                    ></app-select-item>
+                    <app-select-item
+                        title="Dữ liệu của bạn trong YouTube"
+                        icon="fas fa-user-shield"
+                    ></app-select-item>
+                    <app-select-item
+                        title="Trợ giúp"
+                        icon="fas fa-question-circle"
+                    ></app-select-item>
+                    <app-select-item
+                        title="Phản hồi"
+                        icon="fas fa-comment-dots"
+                    ></app-select-item>
+                    <app-select-item
+                        title="Phím tắt"
+                        icon="fas fa-keyboard"
+                    ></app-select-item>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="comment__user" (click)="$event.stopPropagation()">
+    <img
+        [src]="user.linkImg"
+        [alt]="user.name"
+        [ngStyle]="{ width: imgSize, height: imgSize }"
+    />
+
+    <form
+        class="comment-input__form"
+        (ngSubmit)="OnSubmit()"
+        autocomplete="off"
+    >
+        <div class="form__input">
+            <input
+                type="text"
+                name="content"
+                id="content"
+                autocomplete="false"
+                (focus)="Onfocus()"
+                [(ngModel)]="content"
+                (ngModelChange)="Onchange()"
+                [ngStyle]="{ 'background-color': bgColor }"
+                placeholder="Bình luận công khai..."
+            />
+            <div class="comment-border__input"></div>
+        </div>
+
+        <div *ngIf="isFocusInput" class="form__btn">
+            <app-btn-normal
+                name="HỦY"
+                color="#909090"
+                [bgColor]="bgColor"
+                class="btn_normal enabled"
+                (click)="cancelComment()"
+            ></app-btn-normal>
+            <div class="button__submit">
+                <app-btn-normal
+                    type="submit"
+                    name="BÌNH LUẬN"
+                    [color]="canSubmit ? '#0f030e' : '#fff'"
+                    [class]="
+                        canSubmit ? 'btn_normal enable' : 'btn_normal disabled'
+                    "
+                    [bgColor]="canSubmit ? '#3ea6ff' : '#ffffff1A'"
+                ></app-btn-normal>
+            </div>
+        </div>
+    </form>
+</div>

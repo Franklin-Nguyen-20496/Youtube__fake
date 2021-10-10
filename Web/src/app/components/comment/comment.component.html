@@ -1,0 +1,23 @@
+<div class="comment">
+    <div class="comment__header">
+        <div class="comment__overview">
+            <h6 class="count">{{ totalComments }}</h6>
+            <h6>
+                <i class="fas fa-sort-amount-down"></i>
+                SẮP XẾP THEO
+            </h6>
+        </div>
+
+        <app-form-input-comment
+            [videoId]="videoId"
+            (click)="onSubmitComment($event)"
+        ></app-form-input-comment>
+
+        <div *ngFor="let comment of comments" class="comment__container">
+            <app-comment-item
+                [comment]="comment"
+                [commentId]="comment.id"
+            ></app-comment-item>
+        </div>
+    </div>
+</div>

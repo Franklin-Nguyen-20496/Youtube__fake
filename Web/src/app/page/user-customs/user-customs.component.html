@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="video__fixed">
+
+        <div class="video__header">
+            <div class="nav__item">
+                <a routerLink="/videos">
+                    <button type="button" class="btn btn-secondary">
+                        LIST
+                    </button>
+                </a>
+            </div>
+
+            <div class="nav__item">
+                <a routerLink="/videos/create">
+                    <button type="button" class="btn btn-secondary">
+                        CREATE
+                    </button>
+                </a>
+            </div>
+
+            <div class="nav__item">
+                <a routerLink="/">
+                    <button type="button" class="btn btn-danger">
+                        HOME
+                    </button>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="video__nav py-2">
+        <router-outlet></router-outlet>
+    </div>
+</div>

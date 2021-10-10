@@ -1,0 +1,52 @@
+.comment__user {
+    display: flex;
+    margin: 0 0 16px;
+}
+
+.comment__user img {
+    border-radius: 50%;
+    margin: 0 16px 0 0;
+}
+
+.comment__user .comment-input__form {
+    flex: 1;
+}
+
+.comment-input__form .form__input {
+    margin: 0 0 8px;
+}
+
+.comment__user input {
+    display: block;
+    width: 100%;
+    height: 20px;
+    margin: 0 0 4px 0;
+
+    font-size: 14px;
+    color: #fff;
+    border: none;
+}
+
+.comment-border__input {
+    width: 100%;
+    height: 1px;
+    background-color: #717171;
+}
+
+.comment__user input:focus-visible {
+    border: none;
+    outline: none;
+}
+
+.comment__user input:focus-visible ~ .comment-border__input {
+    background-color: #fff;
+}
+
+.comment-input__form .form__btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form__btn .button__submit {
+    margin: 0 0 0 8px;
+}

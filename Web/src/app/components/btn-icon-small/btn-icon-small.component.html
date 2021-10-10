@@ -1,0 +1,7 @@
+<div (click)="$event.stopPropagation()" class="btn-icon" [ngStyle]="{
+        'background-color': isMouseUp ? bgColor : '#ffffff4d'
+    }" (click)="IconClick()" (mousedown)="mouseDown()" (mouseup)="mouseUp()">
+    <div>
+        <i [ngStyle]="{ color: color }" [ngClass]="icon"></i>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+.btn_normal {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    font-weight: 500;
+
+    /* box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3); */
+}
+
+.btn_normal.enabled {
+    cursor: pointer;
+}
+
+.btn_normal.disabled {
+    cursor: auto;
+}

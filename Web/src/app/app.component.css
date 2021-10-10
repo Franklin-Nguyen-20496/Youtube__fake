@@ -1,0 +1,71 @@
+
+#app {
+    position: relative;
+    background-color: #212121;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.body__container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-top: 56px;
+    background-color: #181818;
+}
+
+.fake__navbarXL {
+    width: 240px;
+    height: 100vh;
+}
+
+.fake__navbarMD {
+    width: 72px;
+    height: 100vh;
+}
+
+.container__videos {
+    flex: 1;
+    color: #fff;
+}
+
+h2 {
+    display: block;
+    height: 200px;
+    text-align: center;
+}
+
+.navigation {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 20000;
+}
+
+.app_leftbar {
+    width: 0;
+    height: 0;
+}
+
+.slide__container {
+    position: relative;
+    height: 56px;
+}
+
+.slide__fixed {
+    position: fixed;
+    width: 100%;
+    height: 56px;
+}
+
+@media only screen and (max-width: 1199px) {
+    .slide__container {
+        width: calc(100% - 72px)!important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .slide__container {
+        width: calc(100%)!important;
+    }
+}

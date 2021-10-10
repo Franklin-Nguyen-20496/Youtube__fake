@@ -1,0 +1,144 @@
+.video__container {
+    flex: 1;
+}
+
+.video__wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+#watch__video {
+    padding-top: 24px;
+}
+
+.video__wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.items__container {
+    margin-left: 24px;
+}
+
+@media only screen and (max-width: 991px) {
+    .items__container {
+        margin-left: 0;
+    }
+}
+
+.video__content {
+    padding: 20px 0 8px 0;
+    border-bottom: 1px solid #ffffff1a;
+}
+
+.video__name {
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.video__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 40px;
+    margin-top: 8px;
+}
+
+.video__info p {
+    font-size: 14px;
+    color: #909090;
+    padding: 0;
+    margin: 0;
+}
+
+.video__info i {
+    font-size: 4px;
+    color: #909090;
+    padding: 0 4px;
+    margin: 0;
+}
+
+.info__view, .info__public, .public__like, .public__share,
+.share__item {
+    display: flex;
+    align-items: center;
+    
+}
+
+.public__like {
+    position: relative;
+}
+
+.public__like p {
+    cursor: pointer;
+}
+
+.feel__custom {
+    position: absolute;
+    width: 146px;
+    height: 2px;
+    top: 47px;
+
+    background-color: #181818;
+}
+
+.feel__like {
+    height: 2px;
+    float: left;
+    background-color: #909090;
+}
+
+.feel__unlike {
+    height: 2px;
+    float: right;
+    background-color: #606060;
+}
+
+/* USER infor */
+.user__infor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 16px 0 12px 0;
+}
+
+.user__infor .user-infor__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.user__infor .user-infor__item >p {
+    flex: 1;
+    margin-left: 16px;
+}
+
+.user__infor .user-infor__item img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.video__description {
+    width: 100%;
+    padding: 0 0 16px 64px;
+    margin: 0 0 24px 0;
+    border-bottom: 1px solid #ffffff1a;
+}
+
+.video__description p {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #909090;
+    cursor: pointer;
+}

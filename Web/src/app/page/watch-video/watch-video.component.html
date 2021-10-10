@@ -1,0 +1,181 @@
+<div id="watch__video" class="container-fluid" *ngIf="video$ | async as video">
+    <div class="container-fluid">
+        <div class="d-block d-lg-flex">
+            <div class="video__container">
+                <div class="video__wrapper">
+                    <iframe
+                        width="560"
+                        height="315"
+                        src=""
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+                <div class="video__content">
+                    <h4 class="video__name">{{ video.name }}</h4>
+                    <div class="video__info">
+                        <div class="info__view">
+                            <p>55.732.893 lượt xem</p>
+                            <i
+                                class="
+                                    fas
+                                    fa-circle
+                                    d-none d-sm-block d-lg-none d-xl-block
+                                "
+                            ></i>
+                            <p class="d-none d-sm-block d-lg-none d-xl-block">
+                                24 thg 9, 2021
+                            </p>
+                        </div>
+
+                        <div class="info__public">
+                            <div class="public__like">
+                                <div class="share__item">
+                                    <app-btn-icon
+                                        (iconClick)="toggleLike()"
+                                        icon="fas fa-thumbs-up"
+                                        bgColor="#181818"
+                                        [color]="isLike ? '#3ea6ff' : '#909090'"
+                                    ></app-btn-icon>
+                                    <p
+                                        (click)="toggleLike()"
+                                        [ngStyle]="{
+                                            color: isLike
+                                                ? '#3ea6ff'
+                                                : '#909090'
+                                        }"
+                                    >
+                                        39 N
+                                    </p>
+                                </div>
+                                <div class="share__item">
+                                    <app-btn-icon
+                                        (iconClick)="toggleUnlike()"
+                                        icon="fas fa-thumbs-down"
+                                        bgColor="#181818"
+                                        [color]="
+                                            isUnlike ? '#3ea6ff' : '#909090'
+                                        "
+                                    ></app-btn-icon>
+                                    <p
+                                        (click)="toggleUnlike()"
+                                        [ngStyle]="{
+                                            color: isUnlike
+                                                ? '#3ea6ff'
+                                                : '#909090'
+                                        }"
+                                    >
+                                        1.6 N
+                                    </p>
+                                </div>
+
+                                <div class="feel__custom">
+                                    <div
+                                        [ngStyle]="{
+                                            width: widthLike,
+                                            'background-color': isLike
+                                                ? '#3ea6ff'
+                                                : '#909090'
+                                        }"
+                                        class="feel__like"
+                                    ></div>
+
+                                    <div
+                                        [ngStyle]="{
+                                            width: widthUnlike,
+                                            'background-color': isUnlike
+                                                ? '#3ea6ff'
+                                                : '#606060'
+                                        }"
+                                        class="feel__unlike"
+                                    ></div>
+                                </div>
+                            </div>
+
+                            <div class="public__share">
+                                <div class="share__item">
+                                    <app-btn-icon
+                                        icon="fas fa-share"
+                                        bgColor="#181818"
+                                        color="#909090"
+                                    ></app-btn-icon>
+                                    <p>CHIA SẺ</p>
+                                </div>
+
+                                <div class="share__item d-sm-none d-md-flex">
+                                    <app-btn-icon
+                                        icon="fas fa-folder-plus"
+                                        bgColor="#181818"
+                                        color="#909090"
+                                    >
+                                    </app-btn-icon>
+                                    <p>LƯU</p>
+                                </div>
+
+                                <div class="share__item">
+                                    <app-btn-icon
+                                        icon="fas fa-ellipsis-h"
+                                        bgColor="#181818"
+                                        color="#909090"
+                                    >
+                                    </app-btn-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- user -->
+                <div class="user__infor">
+                    <div class="user-infor__item">
+                        <img [src]="user.linkImg" alt="" />
+                        <p>{{ user.name }}</p>
+                    </div>
+                    <div class="user-infor__item">
+                        <app-btn-normal
+                            [name]="isSubscribe ? 'ĐÃ ĐĂNG KÝ' : 'ĐĂNG KÝ'"
+                            [color]="isSubscribe ? '#909090' : '#fff'"
+                            [bgColor]="isSubscribe ? '#303030' : '#cc0000'"
+                            (click)="toggleSubscribe()"
+                        ></app-btn-normal>
+                        <div *ngIf="isSubscribe" class="item__notify">
+                            <app-btn-icon
+                                color="#909090"
+                                bgColor="#181818"
+                                icon="fas fa-bell"
+                            ></app-btn-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- videos description -->
+                <div class="video__description">
+                    <div class="description__unhide"></div>
+
+                    <div
+                        class="description__hide"
+                        [ngClass]="isHide ? 'd-block' : 'd-none'"
+                    ></div>
+
+                    <p class="button" (click)="toggleHide()">
+                        {{ isHide ? 'ẨN BỚT' : 'HIỆN THÊM' }}
+                    </p>
+                </div>
+
+                <!-- comment -->
+                <app-comment [videoId]="video.id"></app-comment>
+            </div>
+
+            <!-- videos list -->
+            <div class="items__container">
+                <div class="video__item" *ngFor="let Video of videos$ | async">
+                    <a [routerLink]="['/watch', Video.id]">
+                        <app-watch-item [video]="Video"></app-watch-item>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

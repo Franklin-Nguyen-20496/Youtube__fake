@@ -1,0 +1,9 @@
+<div
+    class="small__item"
+    [ngStyle]="{ color: color }"
+    (click)="onclick()"
+    (click)="$event.stopPropagation()"
+>
+    <i [ngClass]="icon"></i>
+    <p>{{ title }}</p>
+</div>

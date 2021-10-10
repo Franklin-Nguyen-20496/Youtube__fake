@@ -1,0 +1,153 @@
+<div
+    [ngStyle]="{ 'background-color': bgColor }"
+    id="header"
+    class="container-fluid"
+>
+    <div class="header__left">
+        <!-- responsive navbar -->
+        <div [ngClass]="hasRoute('/') ? 'd-block d-xl-none' : 'd-block'">
+            <app-btn-icon
+                class="bar__button"
+                (iconClick)="showLeftbar()"
+            ></app-btn-icon>
+        </div>
+
+        <div [ngClass]="hasRoute('/') ? 'd-none d-xl-block' : 'd-none'">
+            <app-btn-icon
+                class="bar__button"
+                (iconClick)="toggleNavbar()"
+            ></app-btn-icon>
+        </div>
+
+        <a routerLink="/" class="header-left__logo">
+            <img src="../../../assets/img/logo.PNG" alt="" />
+        </a>
+    </div>
+
+    <div class="header__search">
+        <div class="search__voice">
+            <div class="search__button">
+                <div
+                    class="search__keyboarch"
+                    [ngStyle]="{ border: '1px solid' + borderColor }"
+                >
+                    <div class="search__input">
+                        <app-input
+                            [BgColor]="bgColor"
+                            [color]="color"
+                        ></app-input>
+                    </div>
+                    <div class="key__icon">
+                        <i
+                            [ngStyle]="{ color: color }"
+                            class="fas fa-keyboard"
+                        ></i>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-dark">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <app-btn-icon
+                icon="fas fa-microphone"
+                bgColor="#181818"
+            ></app-btn-icon>
+        </div>
+    </div>
+
+    <div class="header__right">
+        <div class="header-right__item">
+            <app-btn-icon
+                icon="fas fa-video"
+                (iconClick)="showNavCreatVideo()"
+            ></app-btn-icon>
+
+            <div
+                *ngIf="isShowNavCreatVideo"
+                class="nav__create-video"
+                (click)="$event.stopPropagation()"
+            >
+                <app-select-item
+                    icon="fab fa-youtube"
+                    title="Tải video lên"
+                    color="#f00"
+                ></app-select-item>
+                <app-select-item
+                    icon="fas fa-rss"
+                    title="Phát trực tiếp"
+                    color="#f00"
+                ></app-select-item>
+            </div>
+        </div>
+
+        <div class="header-right__item">
+            <app-btn-icon
+                icon="fas fa-th"
+                (iconClick)="showNavMenu()"
+            ></app-btn-icon>
+
+            <div
+                *ngIf="isShowNavMenu"
+                class="nav__menu"
+                (click)="$event.stopPropagation()"
+            >
+                <div class="menu__item">
+                    <app-select-item
+                        icon="fas fa-tv"
+                        title="Youtube TV"
+                        color="#f00"
+                    ></app-select-item>
+                </div>
+                <div class="menu__item">
+                    <app-select-item
+                        icon="fas fa-record-vinyl"
+                        title="Youtube Music"
+                        color="#f00"
+                    ></app-select-item>
+
+                    <app-select-item
+                        icon="fab fa-youtube"
+                        title="Youtube Kids"
+                        color="#f00"
+                    ></app-select-item>
+                </div>
+                <div class="menu__item">
+                    <app-select-item
+                        icon="fab fa-youtube"
+                        title="Học viện sáng tạo"
+                        color="#f00"
+                    ></app-select-item>
+
+                    <app-select-item
+                        icon="fab fa-youtube"
+                        title="Youtube dành cho Nghệ sĩ"
+                        color="#f00"
+                    ></app-select-item>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-right__item">
+            <div class="header-right__bell">
+                <app-btn-icon
+                    icon="fas fa-bell"
+                    (iconClick)="toggleNotify()"
+                ></app-btn-icon>
+                <div
+                    class="bell__notify"
+                    (click)="toggleNotify()"
+                    (click)="$event.stopPropagation()"
+                >
+                    9+
+                </div>
+            </div>
+            <div *ngIf="isShowNotify">
+                <app-notify></app-notify>
+            </div>
+        </div>
+
+        <div class="header-rignt__user">
+            <app-user-menu></app-user-menu>
+        </div>
+    </div>
+</div>

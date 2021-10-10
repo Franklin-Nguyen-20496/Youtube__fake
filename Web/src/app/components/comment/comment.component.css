@@ -1,0 +1,19 @@
+.comment {
+    margin: 0 0 16px 0;
+}
+
+.comment .comment__overview {
+    font-size: 16px;
+    display: flex;
+    margin: 0 0 24px 0;
+
+}
+
+.comment__overview h6.count {
+    margin: 0 32px 0 0;
+}
+
+.comment__overview h6 i {
+    margin: 0 8px 0 0;
+}
+

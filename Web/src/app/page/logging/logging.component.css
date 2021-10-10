@@ -1,0 +1,21 @@
+.form__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form__logging {
+    min-width: 400px;
+}
+
+.logging__btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav__item a {
+    margin: 0 0 0 8px;
+}

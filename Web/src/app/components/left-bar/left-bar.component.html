@@ -1,0 +1,21 @@
+<div id="left-bar" class="">
+    <div class="header__left">
+        <app-btn-icon
+            class="bar__button"
+            (iconClick)="hideLeftbar()"
+        ></app-btn-icon>
+
+        <div class="header-left__logo">
+            <img src="../../../assets/img/logo.PNG" alt="" />
+        </div>
+
+        <div
+            *ngIf="isShowLeftbar"
+            (click)="OverviewClick()"
+            class="leftbar__overview"
+        ></div>
+    </div>
+    <div>
+        <app-navbar></app-navbar>
+    </div>
+</div>

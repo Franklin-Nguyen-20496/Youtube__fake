@@ -1,0 +1,16 @@
+<div id="notify" (click)="$event.stopPropagation()">
+    <div class="notify__header">
+        <p>Thông báo</p>
+        <app-btn-icon icon="fas fa-cog" (iconClick)="btnClick()">
+        </app-btn-icon>
+    </div>
+
+    <div class="notify__container">
+        <div class="notify__crollspy">
+            <app-notify-item
+                *ngFor="let video of videos"
+                [video]="video"
+            ></app-notify-item>
+        </div>
+    </div>
+</div>

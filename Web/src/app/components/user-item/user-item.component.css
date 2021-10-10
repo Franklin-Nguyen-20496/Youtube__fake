@@ -1,0 +1,42 @@
+.user-item {
+    display: flex;
+    align-items: center;
+
+    height: 40px;
+    width: 240px;
+    padding: 0 24px; 
+
+    background-color: #212121;
+
+    cursor: pointer;
+}
+
+.user-item >img {
+    width: 24px;
+    height: 24px;
+    margin: 0 18px 0 0;
+
+    border-radius: 50%;
+    
+}
+
+.user-item >.user__name {
+    flex: 1;
+    margin: 0 8px 0 0;
+    color: #fff;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.user-item >.user__status {  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 16px;
+    height: 16px;
+}

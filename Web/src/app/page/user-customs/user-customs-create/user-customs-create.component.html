@@ -1,0 +1,39 @@
+<div class="user__header my-3">
+    <h3>CREATE YOUR VIDEO</h3>
+</div>
+
+<div class="container">
+    <div class="user__create">
+        <form (ngSubmit)="onSubmit()">
+
+            <div class="mb-3">
+                <label for="videoname" class="form-label">Name:</label>
+                <input type="text" class="form-control bg-dark text-white" id="videoname" name="video.name"
+                    placeholder="name" [(ngModel)]="video.name" />
+            </div>
+
+            <div class="mb-3">
+                <label for="video__img" class="form-label">Link image:</label>
+                <input type="text" class="form-control bg-dark text-white" id="video__img" name="video.img"
+                    placeholder="link image" [(ngModel)]="video.img" />
+            </div>
+
+
+            <div class="mb-3">
+                <label for="videoId" class="form-label">Video ID:</label>
+                <input type="text" class="form-control bg-dark text-white" id="videoId" name="video.videoLink"
+                    placeholder="Video ID" [(ngModel)]="video.videoLink" />
+            </div>
+
+            <div class="mb-3">
+                <label for="video__description" class="form-label">Description:</label>
+                <input type="text" class="form-control bg-dark text-white" id="video__description"
+                    name="video.description" placeholder="description" [(ngModel)]="video.description" />
+            </div>
+
+            <div class="user__nav">
+                <button type="submit" class="btn btn-primary" (click)="$event.stopPropagation()">CREATE</button>
+            </div>
+        </form>
+    </div>
+</div>

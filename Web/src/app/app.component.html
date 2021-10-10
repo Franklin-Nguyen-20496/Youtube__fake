@@ -1,0 +1,55 @@
+<div id="app" (mouseup)="appMouseUp()" (click)="appClick()">
+    <div class="navigation">
+        <app-header></app-header>
+
+        <div [ngClass]="hasRoute('/') ? 'd-xl-none d-block' : 'd-block'">
+            <app-left-bar> </app-left-bar>
+        </div>
+
+        <div *ngIf="hasRoute('/')" class="d-none d-xl-block">
+            <div *ngIf="isShowNavbar">
+                <app-navbar></app-navbar>
+            </div>
+            <div *ngIf="notIsShowNavbar">
+                <app-leftbar-small></app-leftbar-small>
+            </div>
+        </div>
+
+        <div *ngIf="hasRoute('/')">
+            <div class="d-none d-md-block d-xl-none app_leftbar">
+                <app-leftbar-small></app-leftbar-small>
+            </div>
+        </div>
+    </div>
+
+    <div class="body__container">
+        <div *ngIf="hasRoute('/')">
+            <div
+                [ngStyle]="{ width: isShowNavbar ? '240px' : '72px' }"
+                class="fake__navbarXL d-none d-xl-block"
+            >
+                <h3>fake__navbarXL</h3>
+            </div>
+
+            <div class="fake__navbarMD d-none d-md-block d-xl-none">
+                <h3>fake__navbarMD</h3>
+            </div>
+        </div>
+
+        <div class="container__videos">
+            <div *ngIf="hasRoute('/')" class="slide__fixed">
+                <div
+                    class="slide__container"
+                    [ngStyle]="{
+                        width: isShowNavbar
+                            ? 'calc(100% - 240px)'
+                            : 'calc(100% - 72px)'
+                    }"
+                >
+                    <app-slide></app-slide>
+                </div>
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

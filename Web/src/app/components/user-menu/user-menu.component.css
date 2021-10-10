@@ -1,0 +1,111 @@
+.user__menu {
+    position: relative;
+    background-color: #212121;
+}
+
+.user__container {
+    position: absolute;
+    top: 56px;
+    right: 24px;
+
+    width: 300px;
+    background-color: #212121;
+    border: 1px solid #aaa;
+}
+
+.user__header {
+    display: flex;
+    align-items: flex-start;
+
+    padding: 16px;
+    width: 100%;
+}
+
+.user__header img {
+    width: 40px;
+    height: 40px;
+    margin: 0 16px 0 0;
+
+    border-radius: 50%;
+}
+
+.user__information {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    color: #fff;
+    margin: 0 16px 0 0;
+}
+
+.user__information >p {
+    font-size: 16px;
+    padding: 0;
+    margin: 0 0 4px 0;
+}
+
+.user__information >a {
+    width: 100%;
+    max-width: 200px;
+    text-decoration: none;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    clear: both;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 8px 0 0;
+}
+
+.user__item {
+    width: 298px;
+    padding: 8px 0;
+    border-top: 1px solid #aaa;
+}
+
+/* set scrollbar */
+.userMenu__container {
+    position: relative;
+    width: 298px;
+    height: calc(100vh - 56px - 82px - 18px);
+    /* border: 1px solid #aaa; */
+}
+
+.user__scrollbar {
+    position: absolute;
+    /* border: 1px solid #aaa; */
+    left: 0;
+    top: 0;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    width: 298px;
+    height: calc(100vh - 56px - 82px - 18px);
+    background-color: #212121;
+}
+
+.user__scrollbar:hover::-webkit-scrollbar {
+    display: block;
+}
+
+.user__scrollbar::-webkit-scrollbar {
+    display: none;
+    width: 8px;
+    background-color: #212121;
+}
+
+.user__scrollbar::-webkit-scrollbar-track {
+    width: 8px;
+    border-radius: 0;
+    background-color: #212121;
+    border: none;
+}
+.user__scrollbar::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.3);
+    background-color: #aaa;
+    width: 8px;
+    border-radius: 0;
+    border: none;
+}

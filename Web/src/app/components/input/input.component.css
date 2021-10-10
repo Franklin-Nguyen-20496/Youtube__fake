@@ -1,0 +1,12 @@
+input {
+    flex: 1;
+
+    height: 24px;
+    padding: 2px 0px;
+
+    border: none !important;
+}
+
+input:focus {
+    box-shadow: none;
+}

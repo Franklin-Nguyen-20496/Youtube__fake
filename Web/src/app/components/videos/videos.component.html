@@ -1,0 +1,11 @@
+<div class="container-fluid g-3">
+    <div class="videos row g-3">
+        <div *ngFor="let video of videos | async" class="col-xl-3 col-md-4 col-sm-6 col-12">
+            <app-video-item [video]="video"></app-video-item>
+        </div>
+    </div>
+</div>
+
+<!-- <a [routerLink]="['/watch', video.id]" (click)="$event.stopPropagation()">
+    <app-video-item [video]="video"></app-video-item>
+</a> -->

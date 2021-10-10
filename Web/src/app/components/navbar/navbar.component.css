@@ -1,0 +1,47 @@
+#leftbar__custom {
+    position: relative;
+}
+
+#leftbar__container{
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    width: 240px;
+    height: calc(100vh - 56px);
+}
+
+#leftbar__container::-webkit-scrollbar {
+    display: none;
+}
+
+#leftbar__container:hover::-webkit-scrollbar {
+    display: block;
+}
+
+#leftbar__container::-webkit-scrollbar-track {
+    border-radius: 8px;
+    width: 12px;
+    background-color: #212121;
+    z-index: 1000;
+}
+#leftbar__container::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+    background-color: #aaa;
+    z-index: 1000;
+}
+
+.left-bar__item {
+    padding: 12px 0;
+    border-bottom: 1px solid #ffffff1a;
+    background-color: #212121;
+}
+
+.left-bar__item >p {
+    padding: 0 24px;
+    margin: 8px 0;
+
+    font-size: 15px;
+    color: #aaa;
+}

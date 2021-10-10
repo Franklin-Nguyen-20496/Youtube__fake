@@ -1,0 +1,50 @@
+
+.select-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 40px;
+    padding: 0 24px;
+
+    background-color: #212121;
+    color: #fff;
+
+    font-size: 16px;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.select-item:hover {
+    background-color: rgb(163, 158, 158);
+}
+
+.select-item .select-title {
+    flex: 1;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    /* line-height: 40px; */
+
+    text-overflow: ellipsis;
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.select-item >div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+    margin: 0 20px 0 0;
+}
+
+.select-item >div >i {
+    font-size: 20px;
+}

@@ -1,0 +1,20 @@
+<div class="notify__item">
+    <i [ngStyle]="{ color: 'blue' }" class="fas fa-circle"></i>
+    <img class="item__user-img" [src]="user.linkImg" [alt]="user.name" />
+    <div class="item__name">
+        <p class="name">
+            {{ video.name }}
+        </p>
+        <p class="date">6 tháng trước</p>
+    </div>
+
+    <img class="item__video-img" [src]="video.videoLink" [alt]="video.name" />
+
+    <div class="icon__btn">
+        <app-btn-icon
+            bgColor="#3b3a3a"
+            icon="fas fa-ellipsis-v"
+            (iconClick)="buttonClick()"
+        ></app-btn-icon>
+    </div>
+</div>

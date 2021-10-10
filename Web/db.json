@@ -1,0 +1,739 @@
+{
+    "users": [
+        { 
+            "id": 1,
+            "name": "Hoàng Nguyễn",
+            "linkImg": "https://yt3.ggpht.com/yti/APfAmoEID-BpDbCQ3G_0FdDDkE8dd35BCMSac5pQgnhz=s88-c-k-c0x00ffffff-no-rj-mo" ,
+            "status": "online" ,
+            "subscribeID": [
+                1, 2, 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12
+            ]
+        },
+        { 
+            "id": 2,
+            "name": "Trung Tô",
+            "linkImg": "https://yt3.ggpht.com/ytc/AKedOLTgyHQBhF-Ltmf5XNbbQB1JfiiDNPuZ4_fY7tDbpg=s88-c-k-c0x00ffffff-no-rj" ,
+            "status": "stream" ,
+            "subscribeID": [
+                1, 2, 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12
+            ]
+        },
+        { 
+            "id": 3,
+            "name": "Ba Rọi Béo",
+            "linkImg": "https://yt3.ggpht.com/vxj4MtCwT17lzhjtB2wDOYr_7_0bwWa9ukHSCy-rILp9c9rDMSs6rd2hZti4pbj2vAAf-4XKqg=s88-c-k-c0x00ffffff-no-rj" ,
+            "status": "stream" ,
+            "subscribeID": [
+                1, 2, 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12
+            ]
+        },
+        { 
+            "id": 4,
+            "name": "Phạm Huy Hoàng",
+            "linkImg": "https://yt3.ggpht.com/ytc/AKedOLSPOgrfJZe98gVWbS1-w2TvP9og2EeAeD4D5kw5GA=s88-c-k-c0x00ffffff-no-rj" ,
+            "status": "online" ,
+            "subscribeID": [
+                1, 2, 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12
+            ]
+        },
+        { 
+            "id": 5,
+            "name": "Masew",
+            "linkImg": "https://yt3.ggpht.com/ytc/AKedOLSh07kp6wVBHJcE9FsHUUO2SpxdJrEG41nThlvp0w=s88-c-k-c0x00ffffff-no-rj" ,
+            "status": "online",
+            "subscribeID": [
+                1, 2, 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12
+            ] 
+        },
+        { 
+            "id": 6,
+            "name": "Trực Tiếp Game",
+            "linkImg": "https://yt3.ggpht.com/ytc/AKedOLRf4HuWt4UH4OttKE7BISYpxAGgeK1EqTEbFepB=s88-c-k-c0x00ffffff-no-rj" ,
+            "status": "stream" ,
+            "subscribeID": [
+                1, 2, 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12
+            ]
+        },
+        { 
+            "id": 7,
+            "name": "Sơn Đặng",
+            "linkImg": "https://yt3.ggpht.com/whsaVEv_g4Uw7bGAEp2gbuM-xFBkGM383Qw5IAzyGRaUvcwuRqdxncS66729hxjIBo8wBsssRg=s88-c-k-c0x00ffffff-no-rj" ,
+            "status": "stream" ,
+            "subscribeID": [
+                1, 2, 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12
+            ]
+        },
+        { 
+            "id": 8,
+            "name": "Phê Phim",
+            "linkImg": "https://yt3.ggpht.com/ytc/AKedOLTh6ReF7VfrX_xU4eJpod-k_zG6r8xOnCRIXD3BZQ=s88-c-k-c0x00ffffff-no-rj" ,
+            "status": "online" ,
+            "subscribeID": [
+                1, 2, 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12
+            ]
+        },
+        { 
+            "id": 9,
+            "name": "VFasts",
+            "linkImg": "https://yt3.ggpht.com/ytc/AKedOLSA5SX9VdoXjUqOoGUBhGeGIjaY7l84qYfMHy63Hw=s88-c-k-c0x00ffffff-no-rj" ,
+            "status": "" ,
+            "subscribeID": [
+                1, 2, 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12
+            ]
+        },
+        { 
+            "id": 10,
+            "name": "Phan Mạnh Quỳnh",
+            "linkImg": "https://yt3.ggpht.com/ytc/AKedOLS5YHq-yqHk5WQNSAY9msbs4lbAA3ws4De398R7Dw=s88-c-k-c0x00ffffff-no-rj" ,
+            "status": "online" ,
+            "subscribeID": [
+                1, 2, 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12
+            ]
+        },
+        { 
+            "id": 11,
+            "name": "Sơn Tùng MTP Official",
+            "linkImg": "https://yt3.ggpht.com/ytc/AKedOLQUTCVb5f5qA8l-tqhkkOI_I4zJQ2Wu-6wTUyJTYg=s88-c-k-c0x00ffffff-no-rj" ,
+            "status": "online" ,
+            "subscribeID": [
+                1, 2, 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12
+            ]
+        },
+        { 
+            "id": 12,
+            "name": "JustaTeeMusic",
+            "linkImg": "https://yt3.ggpht.com/ytc/AKedOLTS2_azBscJod07mZBQaEP8ynpc_bi9fA_7iRw6=s88-c-k-c0x00ffffff-no-rj" ,
+            "status": "" ,
+            "subscribeID": [
+                1, 2, 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12
+            ]
+        },
+        { 
+            "id": 13,
+            "name": "Ed Sheeran",
+            "linkImg": "https://yt3.ggpht.com/2uiMtw7drxpcP4J7s61C0x1cK_fdX0Fp_RJ9t9l-RVnal24xyqSLPhIkWYN2I8QneubJAA8J_Fo=s88-c-k-c0x00ffffff-no-rj" ,
+            "status": "online" ,
+            "subscribeID": [
+                1, 2, 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12
+            ]
+        },
+        { 
+            "id": 14,
+            "name": "FAHOKA Xê Dịch",
+            "linkImg": "https://yt3.ggpht.com/ytc/AKedOLTm50Tg28byhWJlqoBPasTBJQqdIImzuN6JA0vIfQ=s88-c-k-c0x00ffffff-no-rj" ,
+            "status": "" ,
+            "subscribeID": [
+                1, 2, 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12
+            ]
+        },
+        { 
+            "id": 15,
+            "name": "Dũng CT",
+            "linkImg": "https://yt3.ggpht.com/ytc/AKedOLTQY7iq5D9cOlV5-sVTxpCDKOsouAWhFvf_OGLW=s88-c-k-c0x00ffffff-no-rj" ,
+            "status": "stream" ,
+            "subscribeID": [
+                1, 2, 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12
+            ]
+        },
+        { 
+            "id": 16,
+            "name": "BLV Anh Quân",
+            "linkImg": "https://yt3.ggpht.com/1xn7I1sOERsJgEbFHjJ8ZFhGKiFKgphTktrVxeJQkNxGntlnyzpynD8X_PutDf5tBfuJpI8oyg=s88-c-k-c0x00ffffff-no-rj" ,
+            "status": "online" ,
+            "subscribeID": [
+                1, 2, 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12
+            ]
+        },
+        { 
+            "id": 17,
+            "name": "KARIK",
+            "linkImg": "https://yt3.ggpht.com/ytc/AKedOLQ_IJxsDaVmIqoeIdhIQYIVfM6V9MKR5SNJDiMM=s88-c-k-c0x00ffffff-no-rj-mo" ,
+            "status": "online" ,
+            "subscribeID": [
+                1, 2, 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12
+            ]
+        }
+    
+    ],
+    "videos": [
+        { 
+            "id": 1,
+            "authorID": 11,
+            "VideoLink": "psZ1g9fMfeo",
+            "img": "https://i.ytimg.com/vi/psZ1g9fMfeo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBZYF1jk3LB2C-sUTidfVXZKkBQiQ",
+            "name": "SƠN TÙNG M-TP | CHÚNG TA CỦA HIỆN TẠI | OFFICIAL MUSIC VIDEO",
+            "likesID": [
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 16
+            ],
+            "dislikesID": [
+                10, 12
+            ],
+            "commentIDs": [
+                13, 14
+            ],
+
+            "description": [
+                "Music Producer: Onionn",
+                "Executive Producer: Nguyen Thanh Tung",
+                "Composer: Son Tung M-TP" ,
+                "Music Producer: Onionn.",
+                "Artist: Son Tung M-TP ",
+                "Starring: Son Tung M-TP, Hai Tu ",
+                "Executive Supervisor: Chau LE",
+                "Project Manager: M-TP Talent | A member of M-TP Entertainment ",
+                "Project Marketing: Henry Nguyen",
+                "Unit Production Manager: Mr. Blue ",
+                "Art Director: Ben Pham ",
+                "Digital Team: Avril Tran, Tu Le",
+                "Partnership Management: Jodie Nguyen, Trang Nguyen",
+                "Admin and Support: Thanh Ha, Viet Nguyen, Hoang Nguyen, Bao Truong, Bich Tran, Hung Dang,Nhi Do",
+                "Securities: Vo Duong Ngoc Hoa ",
+                "Photographer: Manh Bi ",
+                "Photographer Assistant: Phuc Nguyen, Trung Hieu",
+                "BTS Videographer & Editor: Cyan, Tien Le ",
+                "Graphic Designer: Hoang Minh Nguyen" ,
+                "Stylist: Pham Bao Luan" ,
+                "Make Up: Phat Phat" ,
+                "Hair Stylist: Gill Nguyen",
+                "PRODUCED BY CHILDREN OF",
+                "Executive Producer: Tony Nhat Nguyen",
+                "Director: Le Huy Anh",
+                "Script Writers: Nguyen Hoai Thu & Le Huy Anh",
+                "Project Manager: Ngo Mai Phuong",
+                "Producers: Hoang Duy Khanh, Micah Khang, Ngo Mai Phuong",
+                "Line Producer: Hong Vy Tran ",
+                "Cinematographer: Tung Bui",
+                "Art Director: Hai Truong"
+            ],
+            "VideoTagLinks": [
+                {
+                    "description": "▶️ More information about Sơn Tùng M-TP: ",
+                    "links": [
+                        {
+                            "title": "Facebook",
+                            "name": "https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa3BjNWd5azdDOGJEaXdVbndUanhTNklKMmU4QXxBQ3Jtc0trSVJmS2s2U1drT0lVUUxGSlBQR1l6ZUZSNTROVEtULXN3M2FPTXF3V2RBUjBpLXdmN3NkX04zU3hNeDJmUTZscm5vckwyYkRlWllZRGNEcmtNQkpFeGxwdTBNX2I0YmhGS055UXBIY3NMWUEzUFduQQ&q=https%3A%2F%2Fwww.facebook.com%2FMTP.Fan"
+                        },
+
+                        {
+                            "title": "Instagram",
+                            "name": "https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbkFvNzd6TU1oWDlyb29TcHJWTFhoX09jVnpKQXxBQ3Jtc0tuUm9Fck5KcW8zdjJpRzBVZEhacTJ2aG1weFBmZWZWcXJ4YnprbVBhdjJWUXlidUU1bXBDb1dzRERicWhuRHRZZ2I1VEFvQmtNWHNSUDQzM2xoY2lScjBRcFNQYlBOSzRISzdNTGEzMlpzRWZsTV9yRQ&q=https%3A%2F%2Fwww.instagram.com%2Fsontungmtp"
+                        },
+                        {
+                            "title": "Youtube",
+                            "name": "https://www.youtube.com/sontungmtp"
+                        },
+                        {
+                            "title": "Twitter",
+                            "name": "https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa0w2NmpOaHU5Y3FDSlpETlhVc1dDaTByNlBwd3xBQ3Jtc0ttcEdVMXRvMVFrM3h6eVhGaHVoWFVKcDM4OWlsMFhSLUFsZXpGVVpRSkh0V293TGhJSGpqV05DdkpOVmVfd0lhQVE4NkQ0T3M3ZThmUzAwUFpTSXpyZ2QtVW1PMW5sb1FzRjRDYlNhVUFkbVJBTE1ENA&q=https%3A%2F%2Ftwitter.com%2Fsontungmtp777"
+                        },
+                        {
+                            "title": "@Spotify",
+                            "name": "https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa1BLeXRuT3NlWEphM3dYWFhXOGx0VWltY09fQXxBQ3Jtc0tuRkZSMlpmUm44bFBjdW14SGlWVEhzbzVob1pDcWF3MVlsREh6NHY5N3hfUkZiaDktdmw4dXZfeVBqbUxMT0FkLVRVNjM2aElQYTVDQmI2dnZXZ19LS0huTDJMem5GNW4tVkVyTXVzLTktSGtFME4yQQ&q=https%3A%2F%2Fspoti.fi%2F2HPWs20"
+                        },
+                        {
+                            "title": "@Itunes",
+                            "name": "https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbVVFWmZvdTZ1R3BwUU5WNnFrZEJiOFZZTEVyZ3xBQ3Jtc0trWWtBM2pLSy0wRkFYU1BBYXRkdUJ0ZEtrTGtOUDViUjU0Z3NzX3BXM0ZGSVYxQlZiSG1LWnRlU3JwdHAtVzlRRi1lR3FuSmNva3ZSZmJSbGNNci1ENjhCUVZoM2Z2eHlERmJZMTlTbmlzZUpEODNYTQ&q=https%3A%2F%2Fapple.co%2F2rlSl3w"
+                        }
+                    ]
+                }
+            ]
+        },
+
+        { 
+            "id": 2,
+            "authorID": 17,
+            "VideoLink": "5SnV_LVqqsA",
+            "img": "https://i.ytimg.com/vi/5SnV_LVqqsA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD3mIoyper9ZWd5WhEZ7t3NgVx7Gg",
+            "name": "KARIK - Nơi Những Cảm Xúc Nối Dài",
+            "likesID": [
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 16
+            ],
+            "dislikesID": [
+                10, 12
+            ],
+            "commentIDs": [
+                1, 2, 3, 4, 5, 6, 7, 8, 9
+            ],
+
+            "description": [
+                "Lyrics :",
+                "Tình yêu ấy vốn không nên tồn tại",
+                "Thương nhớ ấy ta nên dừng lại",
+                "Càng bước tiếp bên nhau chỉ càng sai",
+                "Vì ta vốn dĩ mông lung ngay từ đầu",
+                "Níu kéo chỉ thêm thương đau",
+                "Mình chưa từng vì nhau (chưa bao giờ vì nhau)",
+
+                "Lúc anh buồn thì em lặng im , khi em cần anh luôn hiện diện",
+                "Em buông tay thì anh lại kiếm , anh chờ em nhưng em chẳng tìm",
+                "Anh là kẻ cố chấp trong tình yêu",
+                "Em là người mù quáng trên tình trường",
+                "Miệng nói thương nhưng chẳng hiểu bao nhiêu",
+                "Thì làm sao tình mình có thể êm ấm giống bao người bình thường",
+                "Khi bình yên cứ nghĩ sẽ không gì khiến 2 ta xa rời",
+                "Nửa đời mình là đây , hạnh phúc chẳng còn xa vời",
+                "Nhưng tiếc thay là không , chỉ là cảm giác tạm thời",
+                "Với tình yêu thật sự mình còn quá non nớt để chạm Tới",
+                "Vì thứ anh cho em không cần , thứ em cần anh không có",
+                "Khuyết điểm bản thân mình không rõ , việc em muốn lo anh không cho",
+                "Cái tôi mỗi người mình không bỏ, thì làm gì còn có sau đó",
+                "Mình làm gì còn có sau đó...",
+                "Nhiều lần tự hỏi mình đã thật sự thương chưa ?",
+                "Giữ nhau đến giờ này ngoài tình yêu còn gì nữa ?",
+                "Nói cần nhau hơn mạng sống nhưng sao nỗi đau lại dư thừa",
+                "Nụ cười trốn tránh , niềm tin mất cả điểm tựa",
+                "Cứ xa rồi tìm về chưa bao lâu rồi lại xa",
+                "Cứ khóc rồi lại cười hứa sẽ vượt qua tất cả",
+                "Nhưng thực tế chuyện vẫn vậy đã bao giờ mình vượt qua ?",
+                "Bình yên vẫn bên lề còn duyên phận thì gục ngã",
+                "Đã vậy thì...mình cứ yêu trong tuyệt vọng",
+                "Tới đâu hay tới đó cho tròn 2 chữ thật lòng",
+                "Không trách , không mong bất cứ điều gì như ngày đầu",
+                "Chờ đợi đến 1 ngày ông trời mang ta rời nhau",
+                "Vậy em nhé...cứ yêu trong tuyệt vọng",
+                "Tới đâu hay tới đó cho tròn 2 chữ thật lòng",
+                "Im lặng , không mong bất cứ điều gì như ngày đầu",
+                "Bình thản đến bật khóc , xóa tên khỏi cuộc đời nhau",
+
+                "Thà rằng đừng nói xem nhau là mai sau",
+                "Đừng lặng lẽ bên nhau nhiều đêm thâu",
+                "Từng vết thương...sẽ chẳng sâu thế này",
+                "(Mình có lẽ đã sớm buông tay từ lâu)",
+                "Để nay nỗi nhớ không thể nào phôi pha",
+                "Ngồi lặng lẽ mong cho thời gian qua",
+                "Chợt bật khóc...(cả 2 ta cùng bật khóc)",
+                "khi thâm tâm nhận ra...(cùng 1 điều thật đau đớn là...)",
+                "Chưa 1 lần cùng cố gắng làm sao đi hết đường dài",
+                "Chưa 1 lần từng thấu hiểu làm sao yêu thương ở lại",
+                "Chưa 1 lần biết hy sinh , đừng trách tình yêu này sai",
+                "Vì ta chưa từng , chưa từng , thật sự chưa từng , chưa chừng",
+                "Vì ta vốn dĩ đã sai ngay từ khi ta bắt đầu",
+                "Vì ta không còn tậm tân với chuyện tình này từ lâu",
+
+                "Nước mắt rơi là vì...",
+                "Mất nhau mãi là vì...",
+                "-----------",
+                "Composer : Karik",
+                "Recording and mixing : Addy Tran"
+                ],
+            "VideoTagLinks": [
+                {
+                    "description": "▶️ More information about KARIK",
+                    "links": [
+                        {
+                            "title": "Fanpage chính thức KARIK",
+                            "name": "https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbFBlMVhhTGtJNEJmVzkyNkRyYUdoeDFvTzFfd3xBQ3Jtc0trOG1IUi1qNy1Pa2VrTWtwanFSVFRjek1oMTBMb2hjU1daWi1YZFpaVG1IbHN3c1NvSUIwYjVkZG8xSXRLcnM0LUV3T01rSXZjaENrdzVCa0l6bDUyQXE5RFdUcVMxUDEwOXAtYnlseFQtN0JuUjFXOA&q=https%3A%2F%2Fwww.facebook.com%2Fkarik.phk"
+                        },
+
+                        {
+                            "title": "Soundcloud chính thức",
+                            "name": "https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqazFqeThkd180bTJCQmE1eU5IeU01X1drdnRyZ3xBQ3Jtc0tsbGNRZ0VnZ1RNM2xKNUlMN1lnekJNb1Jia29LZmZiMW9HbVNRQ3VGWE5hXzMwQk16ZzM3LU96ckM1bzljUFpuS2c0cjRLTl9KVThRbmxZRHF3NExXVnltZDJPXzZHdkF0Y1dfTy1tZTBLS3FzYjNaRQ&q=https%3A%2F%2Fsoundcloud.com%2Fkarikpham%2Ftracks"
+                        },
+                        {
+                            "title": "Link mp3",
+                            "name": "https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa1FDNXJ4eFJLQTNMbE9IU3U2V1NVWE0xVXFVd3xBQ3Jtc0tucE4waEx5M1YzYlZGNGxqcUJQQkprSFFlQmlKRmx1dmVDSDZ3UUcxMVhrZlpCUk9Hc29HREZzdHZ3ZTQ5SkZyM3pvQUQ2Ym0xYnY5elNzLVUxamlQNFlEM0JMLXRjb0hvY2U5eGVmOVlJTllFY1ZWQQ&q=http%3A%2F%2Fmp3.zing.vn%2Falbum%2FCan-Ca-Nuoc-Mat--Single--Karik-Thai-Trinh%2FZWZCUZ0Z.html"
+                        }
+                    ]
+                }
+            ]
+        },
+
+        { 
+            "id": 3,
+            "authorID": 10,
+            "VideoLink": "xuakxSnFUxc",
+            "img": "https://i.ytimg.com/vi/xuakxSnFUxc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB49Cj9Ty8sAuMiNxlT1j1yZVcgmA",
+            "name": "HÀ LAN - PHAN MẠNH QUỲNH | MẮT BIẾC OST",
+            "likesID": [
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 16
+            ],
+            "dislikesID": [
+                12
+            ],
+            "commentIDs": [
+                7, 8, 9
+            ],
+
+            "description": [
+                "Hà Lan - Phan Mạnh Quỳnh | OST Mắt Biếc." ,
+                "Sáng tác và trình bày: Phan Mạnh Quỳnh" ,
+                "Hoà âm, phối khí: Ngô Minh Hoàng",
+                "Thu âm và mixing: PMQStudio"
+                ],
+            "VideoTagLinks": [
+                {
+                    "description": "▶️ More information about Phan Mạnh Quỳnh",
+                    "links": [
+                        {
+                            "title": "Fanpage chính thức Phan Mạnh Quỳnh",
+                            "name": "https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbFBlMVhhTGtJNEJmVzkyNkRyYUdoeDFvTzFfd3xBQ3Jtc0trOG1IUi1qNy1Pa2VrTWtwanFSVFRjek1oMTBMb2hjU1daWi1YZFpaVG1IbHN3c1NvSUIwYjVkZG8xSXRLcnM0LUV3T01rSXZjaENrdzVCa0l6bDUyQXE5RFdUcVMxUDEwOXAtYnlseFQtN0JuUjFXOA&q=https%3A%2F%2Fwww.facebook.com%2Fkarik.phk"
+                        }
+                    ]
+                }
+            ]
+        },
+        { 
+            "id": 4,
+            "authorID": 10,
+            "VideoLink": "Ik0q1qPUddk",
+            "img": "https://i.ytimg.com/vi/Ik0q1qPUddk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCS1qHvpHcf17GYjIq6Pi-BsLlSpw",
+            "name": "Ai Cũng Có Ngày Xưa - Phan Mạnh Quỳnh | AUDIO LYRIC HD",
+            "likesID": [
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 16
+            ],
+            "dislikesID": [
+                12, 13
+            ],
+            "commentIDs": [
+                1, 2, 3
+            ],
+
+            "description": [
+                "AUDIO LYRIC sử dụng bộ ảnh Tuổi thơ của nhiếp ảnh gia Herman Damar",
+                "Ai Cũng Có Ngày Xưa - Phan Mạnh Quỳnh | AUDIO LYRIC HD",
+                "Sản xuất âm nhạc: PMQ Studio",
+                "Sáng tác: Phan Mạnh Quỳnh"
+                ],
+            "VideoTagLinks": [
+                {
+                    "description": "▶️ More information about Phan Mạnh Quỳnh",
+                    "links": [
+                        {
+                            "title": "Fanpage chính thức Phan Mạnh Quỳnh",
+                            "name": "https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbFBlMVhhTGtJNEJmVzkyNkRyYUdoeDFvTzFfd3xBQ3Jtc0trOG1IUi1qNy1Pa2VrTWtwanFSVFRjek1oMTBMb2hjU1daWi1YZFpaVG1IbHN3c1NvSUIwYjVkZG8xSXRLcnM0LUV3T01rSXZjaENrdzVCa0l6bDUyQXE5RFdUcVMxUDEwOXAtYnlseFQtN0JuUjFXOA&q=https%3A%2F%2Fwww.facebook.com%2Fkarik.phk"
+                        }
+                    ]
+                }
+            ]
+        },
+
+        { 
+            "id": 5,
+            "authorID": 14,
+            "VideoLink": "Yg6tpqB98Ys",
+            "img": "https://i.ytimg.com/vi/NBCATlmaw9c/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCCnFbIvUKTKhCXNQfz9QtyIdyfmQ",
+            "name": "Nhật ký đến VÕ ĐANG SƠN bồng lai Kim Dung",
+            "likesID": [
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 16
+            ],
+            "dislikesID": [
+                12, 13
+            ],
+            "commentIDs": [
+                4, 5, 6
+            ],
+            "description": [
+                "💌Email: hoankhai.fahoka@gmail.com",
+                "Nhớ ủng hộ kênh bằng cách đăng ký để du lịch khắp thế gian nhé!",
+                "-----",
+                "If you are not pleasant of some sound & image in the video, pls contact me I will consider to edit or remove. Thank you!"
+                ],
+            "VideoTagLinks": [
+                {
+                    "description": "▶️ More information about FAHOKA xê dịch",
+                    "links": [
+                        {
+                            "title": "Youtube",
+                            "name": "https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbFBlMVhhTGtJNEJmVzkyNkRyYUdoeDFvTzFfd3xBQ3Jtc0trOG1IUi1qNy1Pa2VrTWtwanFSVFRjek1oMTBMb2hjU1daWi1YZFpaVG1IbHN3c1NvSUIwYjVkZG8xSXRLcnM0LUV3T01rSXZjaENrdzVCa0l6bDUyQXE5RFdUcVMxUDEwOXAtYnlseFQtN0JuUjFXOA&q=https%3A%2F%2Fwww.facebook.com%2Fkarik.phk"
+                        }
+                    ]
+                }
+            ]
+        },
+        { 
+            "id": 6,
+            "authorID": 14,
+            "VideoLink": "nE6zxypl8v4",
+            "img": "https://i.ytimg.com/vi/rAUKq0Rb3v0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA0Z0W0REZGcEMnAy_Q40OtjC-ltA",
+            "name": "Mời bạn đi Kyoto - phố cổ đẹp nhất Nhật Bản/ Chùa Kiyomizu/ Chùa vàng/ Khu Geisha/ Rừng trúc",
+            "likesID": [
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 16
+            ],
+            "dislikesID": [
+                12, 13
+            ],
+            "commentIDs": [
+                7, 8, 9
+            ],
+
+            "description": [
+                "💌Email: hoankhai.fahoka@gmail.com",
+                "Nhớ ủng hộ kênh bằng cách đăng ký để du lịch khắp thế gian nhé!",
+                "-----",
+                "If you are not pleasant of some sound & image in the video, pls contact me I will consider to edit or remove. Thank you!"
+                ],
+            "VideoTagLinks": [
+                {
+                    "description": "▶️ More information about FAHOKA xê dịch",
+                    "links": [
+                        {
+                            "title": "Youtube",
+                            "name": "https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbFBlMVhhTGtJNEJmVzkyNkRyYUdoeDFvTzFfd3xBQ3Jtc0trOG1IUi1qNy1Pa2VrTWtwanFSVFRjek1oMTBMb2hjU1daWi1YZFpaVG1IbHN3c1NvSUIwYjVkZG8xSXRLcnM0LUV3T01rSXZjaENrdzVCa0l6bDUyQXE5RFdUcVMxUDEwOXAtYnlseFQtN0JuUjFXOA&q=https%3A%2F%2Fwww.facebook.com%2Fkarik.phk"
+                        }
+                    ]
+                }
+            ]
+        },
+        { 
+            "id": 7,
+            "authorID": 16,
+            "VideoLink": "E-GfQNBuS-U",
+            "img": "https://i.ytimg.com/vi/rLTorS3mEUQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB3S_SirksY9tAk22-gxhV6Bejssg",
+            "name": "LIONEL MESSI - MỘT THỦ LĨNH, MỘT CẦU THỦ PHI THƯỜNG",
+            "likesID": [
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 16
+            ],
+            "dislikesID": [
+                12, 13
+            ],
+            "commentIDs": [
+                10, 11, 12
+            ],
+
+            "description": [
+                ],
+            "VideoTagLinks": [
+                {
+                    "description": "▶️ More information about BLV Anh Quân",
+                    "links": [
+                        {
+                            "title": "Youtube",
+                            "name": "https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbFBlMVhhTGtJNEJmVzkyNkRyYUdoeDFvTzFfd3xBQ3Jtc0trOG1IUi1qNy1Pa2VrTWtwanFSVFRjek1oMTBMb2hjU1daWi1YZFpaVG1IbHN3c1NvSUIwYjVkZG8xSXRLcnM0LUV3T01rSXZjaENrdzVCa0l6bDUyQXE5RFdUcVMxUDEwOXAtYnlseFQtN0JuUjFXOA&q=https%3A%2F%2Fwww.facebook.com%2Fkarik.phk"
+                        }
+                    ]
+                }
+            ]
+        },
+        { 
+            "id": 8,
+            "authorID": 11,
+            "VideoLink": "Llw9Q6akRo4",
+            "img": "https://i.ytimg.com/vi/Llw9Q6akRo4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBhZrAW0s1edniVJsk7avNRccrLig",
+            "name": "LẠC TRÔI | OFFICIAL MUSIC VIDEO | SƠN TÙNG M-TP",
+            "likesID": [
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 16
+            ],
+            "dislikesID": [
+                12, 13
+            ],
+            "commentIDs": [
+                3, 5, 7
+            ],
+
+            "description": [
+                "Lạc Trôi | Official Music Video | Sơn Tùng M-TP",
+                "Được thực hiện bởi / Video made by",
+                "Sáng tác / Composer: Son Tung M-TP",
+                "Hòa âm phối khí / Music Producer: Triple D ",
+                "Diễn viên / Artress: Ho Thu Anh",
+                "Đạo diễn / Director: Dinh Ha Uyen Thu",
+                "Hoạ sĩ thiết kế / Production designer: Do Ba Ty ",
+                "Giám đốc hình ảnh / D.O.P: Tung Bui",
+                "Hậu kỳ / Post production: MR.BLUE",
+                "Đơn vị sản xuất / Executive Producer: M&M HOUSE"
+                ],
+            "VideoTagLinks": [
+                {
+                    "description": "▶️ More information about Sơn Tùng M-TP",
+                    "links": [
+                        {
+                            "title": "Youtube",
+                            "name": "https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbFBlMVhhTGtJNEJmVzkyNkRyYUdoeDFvTzFfd3xBQ3Jtc0trOG1IUi1qNy1Pa2VrTWtwanFSVFRjek1oMTBMb2hjU1daWi1YZFpaVG1IbHN3c1NvSUIwYjVkZG8xSXRLcnM0LUV3T01rSXZjaENrdzVCa0l6bDUyQXE5RFdUcVMxUDEwOXAtYnlseFQtN0JuUjFXOA&q=https%3A%2F%2Fwww.facebook.com%2Fkarik.phk"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    
+    "comments": [
+        {
+            "id": 1,
+            "userID": 17,
+            "content": "Good job bro!!!",
+            "responseCommentIDs": [
+                1, 2, 3
+            ]
+        },
+        {
+            "id": 2,
+            "userID": 3,
+            "content": "đến giờ nghe vẫn cứ hay :3",
+            "responseCommentIDs": []
+        },
+        {
+            "id": 3,
+            "userID": 14,
+            "content": "Sơn tùng mtp luôn là số 1",
+            "responseCommentIDs": [
+                1, 2, 8, 9
+            ]
+        },
+        {
+            "id": 4,
+            "userID": 3,
+            "content": "The lovestory is so cute but at the same time it sad. I hope it was Thai series with the same artist/cast and with this beautiful song as OST.",
+            "responseCommentIDs": [
+                9
+            ]
+        },
+        {
+            "id": 5,
+            "userID": 15,
+            "content": "Although I don’t understand Vietnamese, but I also love this song.",
+            "responseCommentIDs": [
+                
+            ]
+        },
+        {
+            "id": 6,
+            "userID": 5,
+            "content": "Wow!!!!!!!!!!! THIS IS AMAZING! what a beautiful voice",
+            "responseCommentIDs": [
+                1, 9
+            ]
+        },
+        {
+            "id": 7,
+            "userID": 7,
+            "content": "Wow!!!!!!!!!!! THIS IS AMAZING! what a beautiful voice",
+            "responseCommentIDs": [
+                1, 2, 3, 4, 5, 6, 7, 8, 9
+            ]
+        },
+        {
+            "id": 8,
+            "userID": 9,
+            "content": "Wow!!!!!!!!!!! THIS IS AMAZING! what a beautiful voice",
+            "responseCommentIDs": [
+                1, 2, 3, 4, 5, 6
+            ]
+        },
+        {
+            "id": 9,
+            "userID": 12,
+            "content": "Wow!!!!!!!!!!! THIS IS AMAZING! what a beautiful voice",
+            "responseCommentIDs": [
+               
+            ]
+        },
+        {
+            "id": 10,
+            "userID": 14,
+            "content": "Wow!!!!!!!!!!! THIS IS AMAZING! what a beautiful voice",
+            "responseCommentIDs": [
+                1, 2, 3
+            ]
+        },
+        {
+            "id": 11,
+            "userID": 14,
+            "content": "Wow!!!!!!!!!!! THIS IS AMAZING! what a beautiful voice",
+            "responseCommentIDs": [
+                1, 4, 5, 6, 9
+            ]
+        },
+        {
+            "id": 12,
+            "userID": 17,
+            "content": "Wow!!!!!!!!!!! THIS IS AMAZING! what a beautiful voice",
+            "responseCommentIDs": [
+                6, 7, 8, 9
+            ]
+        },
+
+        {
+            "id": 13,
+            "userID": 15,
+            "content": "Wow!!!!!!!!!!! THIS IS AMAZING! what a beautiful voice",
+            "responseCommentIDs": [
+                10, 11, 12
+            ]
+        },
+
+        {
+            "id": 14,
+            "userID": 11,
+            "content": "Wow!!!!!!!!!!! THIS IS AMAZING! what a beautiful voice",
+            "responseCommentIDs": [
+                13,14
+            ]
+        }
+        
+    ],
+
+    "responseComments": [
+        {
+            "id": 1,
+            "userCommentID": 11,
+            "content": "I watched this on Netflix. This movie is so good that I cried when Ngan truly love the one he met since young . The love that so powerful that enough to break his heart in pieces too 🥺"
+        },
+        {
+            "id": 2,
+            "userCommentID": 3,
+            "content": "I watched this on Netflix. This movie is so good that I cried when Ngan truly love the one he met since young . The love that so powerful that enough to break his heart in pieces too 🥺"
+        },
+        {
+            "id": 3,
+            "userCommentID": 4,
+            "content": "Dịu dàng và run rẩy. Không phải bắt tai, mà là bắt lấy cõi lòng."
+        },
+        {
+            "id": 4,
+            "userCommentID": 5,
+            "content": "Dịu dàng và run rẩy. Không phải bắt tai, mà là bắt lấy cõi lòng."
+        },
+        {
+            "id": 5,
+            "userCommentID": 12,
+            "content": "Dịu dàng và run rẩy. Không phải bắt tai, mà là bắt lấy cõi lòng."
+        },
+        {
+            "id": 6,
+            "userCommentID": 7,
+            "content": "Dịu dàng và run rẩy. Không phải bắt tai, mà là bắt lấy cõi lòng."
+        },
+        {
+            "id": 7,
+            "userCommentID": 8,
+            "content": "Dịu dàng và run rẩy. Không phải bắt tai, mà là bắt lấy cõi lòng."
+        },
+        {
+            "id": 8,
+            "userCommentID": 9,
+            "content": "Dịu dàng và run rẩy. Không phải bắt tai, mà là bắt lấy cõi lòng."
+        },
+        {
+            "id": 9,
+            "userCommentID": 10,
+            "content": "Dịu dàng và run rẩy. Không phải bắt tai, mà là bắt lấy cõi lòng."
+        },
+        {
+            "id": 10,
+            "userCommentID": 11,
+            "content": "Dịu dàng và run rẩy. Không phải bắt tai, mà là bắt lấy cõi lòng."
+        },
+        {
+            "id": 11,
+            "userCommentID": 12,
+            "content": "Dịu dàng và run rẩy. Không phải bắt tai, mà là bắt lấy cõi lòng."
+        },
+        {
+            "id": 12,
+            "userCommentID": 13,
+            "content": "Dịu dàng và run rẩy. Không phải bắt tai, mà là bắt lấy cõi lòng."
+        },
+        {
+            "id": 13,
+            "userCommentID": 14,
+            "content": "Dịu dàng và run rẩy. Không phải bắt tai, mà là bắt lấy cõi lòng."
+        },
+        {
+            "id": 14,
+            "userCommentID": 15,
+            "content": "Dịu dàng và run rẩy. Không phải bắt tai, mà là bắt lấy cõi lòng."
+        }
+    ],
+
+    "profile": { "name": "typicode" }
+}

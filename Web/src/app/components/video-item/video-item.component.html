@@ -1,0 +1,25 @@
+<div class="video__item" *ngIf="notDeleted" (click)="watchVideo()" (click)="$event.stopPropagation()">
+    <div class="item__img">
+        <img [src]="video.img" [alt]="video.name" />
+    </div>
+    <div class="video__name" (mouseover)="onMouseover()" (mouseleave)="onMouseleave()">
+        <img [src]="user.linkImg" [alt]="user.name" />
+        <div class="description">
+            <div class="name">
+                <h4 [title]="video.name">{{ video.name }}</h4>
+            </div>
+            <p>{{ user.name }}</p>
+            <div class="duration">
+                <p>
+                    1025 lượt xem
+                    <i class="fas fa-circle"></i>
+                </p>
+                <p>5 tháng trước</p>
+            </div>
+        </div>
+        <div class="name__btn">
+            <app-btn-icon-small (click)="deleteVideo()" icon="fas fa-ellipsis-v" [color]="color" bgColor="#181818">
+            </app-btn-icon-small>
+        </div>
+    </div>
+</div>

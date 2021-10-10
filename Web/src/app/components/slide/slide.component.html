@@ -1,0 +1,44 @@
+<div id="slide" (window:resize)="onResize($event)">
+    <div
+        class="slide__tranform"
+        [ngStyle]="{ transform: 'translateX(' + $value + 'px)' }"
+    >
+        <div class="first__btn">
+            <app-slide-btn name="Tất cả"></app-slide-btn>
+        </div>
+
+        <app-slide-btn name="Danh sách kết hợp"></app-slide-btn>
+        <app-slide-btn name="Trực tiếp"></app-slide-btn>
+        <app-slide-btn name="Âm nhạc"></app-slide-btn>
+        <app-slide-btn name="Bóng đá"></app-slide-btn>
+        <app-slide-btn name="Du lịch"></app-slide-btn>
+        <app-slide-btn name="Phim hoạt hình"></app-slide-btn>
+        <app-slide-btn name="Đọc rap"></app-slide-btn>
+        <app-slide-btn name="Chương trình nấu ăn"></app-slide-btn>
+        <app-slide-btn name="Trò chơi hành động phiêu lưu"></app-slide-btn>
+        <app-slide-btn name="Mới tải lên gần đây"></app-slide-btn>
+        <app-slide-btn name="Đã xem"></app-slide-btn>
+
+        <div class="last__btn">
+            <app-slide-btn name="Đề xuất mới"></app-slide-btn>
+        </div>
+    </div>
+
+    <div *ngIf="isClickLeftBtn" class="left__btn">
+        <div class="button__left">
+            <app-btn-icon-small
+                icon="fas fa-angle-left"
+                (click)="handleLeftBtn()"
+            ></app-btn-icon-small>
+        </div>
+    </div>
+
+    <div *ngIf="isClickRightBtn" class="right__btn">
+        <div class="button__right">
+            <app-btn-icon-small
+                icon="fas fa-angle-right"
+                (click)="handleRightBtn()"
+            ></app-btn-icon-small>
+        </div>
+    </div>
+</div>

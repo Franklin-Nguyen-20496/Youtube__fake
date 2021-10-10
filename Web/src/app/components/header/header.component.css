@@ -1,0 +1,174 @@
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 56px;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+
+}
+
+.header-left__logo >img {
+    width: auto;
+    height: 40px;
+    margin: 0 0 0 8px;
+    cursor: pointer;
+}
+
+.header__search {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    
+    max-width: 728px;
+    min-width: 350px;
+}
+
+.search__voice {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.search__button {
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    width: 100%;
+    margin: 0 4px 0 40px;
+
+    border: 1px solid #303030;
+    border-radius: 2px;
+}
+
+.search__button >button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 65px;
+    height: 30px;
+
+    box-shadow: none;
+    border-radius: 0 2px 2px 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.search__button >button >i {
+    font-size: 16;
+    opacity: 0.9;
+}
+
+.search__keyboarch {
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    height: 30px;
+    padding: 2px 6px;
+
+    border-radius: 2px 0 0 2px;
+    border: 1px solid ; 
+}
+
+.search__input {
+    flex: 1;
+}
+
+.key__icon {
+    padding: 0 4px;
+    font-size: 18px;
+}
+
+.key__icon >i {
+    opacity: 0.4;
+}
+
+.key__icon >i:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+
+    margin-left: 20px;
+}
+
+.header-right__item {
+    margin-right: 8px;
+    position: relative;
+}
+
+.header-right__item .nav__create-video {
+    position: absolute;
+    top: 48px;
+    min-width: 200px;
+    padding: 8px 0;
+
+    border: 1px solid #aaa;
+    background-color: #202020;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.header-right__bell {
+    position: relative;
+}
+
+.bell__notify {
+    position: absolute;
+    top: 4px;
+    right: 1px;
+    color: #fff;
+    background-color: #c00;
+    border: 1px solid #212121fa;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 11px;
+    line-height: 18px;
+    font-weight: 300;
+}
+
+.header-rignt__user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    height: 40px;
+}
+
+.header-rignt__user >img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.nav__menu {
+    position: absolute;
+    top: 48px;
+    right: calc(-100% + 40px);
+    
+    min-width: max-content;
+
+    background-color: #202020;
+    border: 1px solid #aaa;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.nav__menu .menu__item {
+    padding: 8px 0;
+    border-bottom: 1px solid #aaa;
+}

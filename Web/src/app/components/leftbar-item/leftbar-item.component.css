@@ -1,0 +1,26 @@
+.small__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 72px;
+    height: 72px;
+
+    cursor: pointer;
+}
+
+.small__item i {
+    margin: 0 0 6px;
+    font-size: 18px;
+}
+
+.small__item p {
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.small__item:hover {
+    background-color: #ffffff14;
+}
