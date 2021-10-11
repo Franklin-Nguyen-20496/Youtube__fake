@@ -12,6 +12,7 @@ import { USER } from '../../Model/User/user';
 export class ResponseCommentItemComponent implements OnInit {
     @Input() responseComment: responseComment = {
         id: 1,
+        videoId: NaN,
         authorId: NaN,
         commentId: 1,
         content: 'This is a response comments',
@@ -19,6 +20,7 @@ export class ResponseCommentItemComponent implements OnInit {
         created: new Date(),
     };
     @Input() commentId!: number;
+    @Input() videoId!: number;
 
     // "id": 1,
     // "authorId": 4,
@@ -47,7 +49,7 @@ export class ResponseCommentItemComponent implements OnInit {
     constructor(
         private commentService: CommentService,
         private usersService: UsersService,
-    ) {}
+    ) { }
 
     ngOnInit(): void {
         this.usersService

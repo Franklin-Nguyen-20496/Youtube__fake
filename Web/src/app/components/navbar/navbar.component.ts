@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
     title2: string = '';
     isUsers2: boolean = false;
 
-    constructor(private usersService: UsersService, private router: Router) {}
+    constructor(private usersService: UsersService, private router: Router) { }
 
     ngOnInit(): void {
         this.usersService.getUsers().subscribe((data) => {
@@ -41,7 +41,7 @@ export class NavbarComponent implements OnInit {
             if (this.users2 === []) {
                 this.isUsers2 = false;
             } else {
-                this.isUsers2 = false;
+                this.isUsers2 = true;
             }
         });
     }

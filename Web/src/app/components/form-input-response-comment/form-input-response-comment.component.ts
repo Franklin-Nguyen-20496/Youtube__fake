@@ -22,6 +22,7 @@ export class FormInputResponseCommentComponent implements OnInit {
         created: new Date(),
     };
     @Input() commentId!: number;
+    @Input() videoId!: number;
     @Input() bgColor: string = '#181818';
     @Input() imgSize: string = '24px';
 
@@ -83,6 +84,7 @@ export class FormInputResponseCommentComponent implements OnInit {
     OnSubmit() {
         if (this.content != null) {
             this.responseComment = {
+                videoId: this.videoId,
                 authorId: this.user.id,
                 commentId: this.commentId,
                 content: this.content,

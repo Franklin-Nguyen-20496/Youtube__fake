@@ -66,6 +66,7 @@ class Db {
 		this.comments.hasMany(this.responseComments, { as: 'responseComments', foreignKey: 'commentId' })
 
 		this.responseComments.belongsTo(this.comments, { as: 'comment', foreignKey: 'commentId' });
+		this.responseComments.belongsTo(this.videos, { as: 'video', foreignKey: 'videoId' });
 		this.responseComments.belongsTo(this.users, { as: 'user', foreignKey: 'authorId' });
 
 	}

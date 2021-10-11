@@ -14,6 +14,7 @@ import * as $ from 'jquery';
 export class CommentItemComponent implements OnInit {
     @Input() comment!: comment;
     @Input() commentId!: number;
+    @Input() videoId!: number;
 
     responseComments: responseComment[] = [];
 

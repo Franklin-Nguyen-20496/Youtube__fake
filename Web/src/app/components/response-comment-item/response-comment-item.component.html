@@ -1,8 +1,4 @@
-<div
-    class="response-comment__item"
-    (mouseover)="onMouseover()"
-    (mouseleave)="onMouseleave()"
->
+<div class="response-comment__item" (mouseover)="onMouseover()" (mouseleave)="onMouseleave()">
     <div class="item__img">
         <img [src]="user.linkImg" [alt]="user.name" />
     </div>
@@ -16,49 +12,29 @@
         </p>
         <div class="item__btn">
             <div class="btn__item">
-                <app-btn-icon-small
-                    (click)="toggleLike()"
-                    icon="fas fa-thumbs-up"
-                    [color]="isLike ? '#3ea6ff' : staticColor"
-                    [bgColor]="bgColor"
-                ></app-btn-icon-small>
+                <app-btn-icon-small (click)="toggleLike()" icon="fas fa-thumbs-up"
+                    [color]="isLike ? '#3ea6ff' : staticColor" [bgColor]="bgColor"></app-btn-icon-small>
             </div>
             <div *ngIf="toggleTotalLike()" class="btn__item">
                 <p class="total__like">{{ totalLike }}</p>
             </div>
             <div class="btn__item">
-                <app-btn-icon-small
-                    (click)="toggleUnlike()"
-                    icon="fas fa-thumbs-down"
-                    [color]="isUnlike ? '#3ea6ff' : staticColor"
-                    [bgColor]="bgColor"
-                ></app-btn-icon-small>
+                <app-btn-icon-small (click)="toggleUnlike()" icon="fas fa-thumbs-down"
+                    [color]="isUnlike ? '#3ea6ff' : staticColor" [bgColor]="bgColor"></app-btn-icon-small>
             </div>
             <div class="btn__item">
-                <app-btn-normal
-                    (click)="OnResponseComment()"
-                    [color]="staticColor"
-                    bgColor="#181818"
-                    name="PHẢN HỒI"
-                >
+                <app-btn-normal (click)="OnResponseComment()" [color]="staticColor" bgColor="#181818" name="PHẢN HỒI">
                 </app-btn-normal>
             </div>
         </div>
     </div>
 
     <div class="btn__seting">
-        <app-btn-icon-small
-            icon="fas fa-ellipsis-v"
-            [color]="color"
-            bgColor="#181818"
-        ></app-btn-icon-small>
+        <app-btn-icon-small icon="fas fa-ellipsis-v" [color]="color" bgColor="#181818"></app-btn-icon-small>
     </div>
 </div>
 
 <div *ngIf="isShowResponseCommentInput" class="response__form-input">
-    <app-small-form-input
-        (click)="getHideInputForm($event)"
-        [commentId]="commentId"
-    >
+    <app-small-form-input (click)="getHideInputForm($event)" [commentId]="commentId" [videoId]="videoId">
     </app-small-form-input>
 </div>

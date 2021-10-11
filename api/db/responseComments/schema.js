@@ -7,6 +7,11 @@ class Schema {
         autoIncrement: true,
         primaryKey: true,
       },
+      videoId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        field: 'videoId',
+      },
       authorId: {
         type: DataTypes.INTEGER,
         allowNull: false,

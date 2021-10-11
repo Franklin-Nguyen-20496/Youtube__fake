@@ -8,16 +8,10 @@
             </h6>
         </div>
 
-        <app-form-input-comment
-            [videoId]="videoId"
-            (click)="onSubmitComment($event)"
-        ></app-form-input-comment>
+        <app-form-input-comment [videoId]="videoId" (click)="onSubmitComment($event)"></app-form-input-comment>
 
         <div *ngFor="let comment of comments" class="comment__container">
-            <app-comment-item
-                [comment]="comment"
-                [commentId]="comment.id"
-            ></app-comment-item>
+            <app-comment-item [comment]="comment" [commentId]="comment.id" [videoId]="videoId"></app-comment-item>
         </div>
     </div>
 </div>

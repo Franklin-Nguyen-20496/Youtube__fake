@@ -26,7 +26,7 @@ class VideosController {
     async createVideo(video) {
         try {
             let result = await db.videos.create(video);
-            if (result = null) {
+            if (result === null) {
                 return 'something wrong';
             }
             else {
@@ -54,51 +54,19 @@ class VideosController {
 
     async deleteVideo(videoId) {
         try {
-            let comments = await db.comments.findAll({
+            let options = {
                 where: {
-                    videoId: videoId,
+                    videoId: videoId
                 }
-            });
-
-            if (comments != null) {
-                await comments.forEach(value => {
-                    db.responseComments.destroy({
-                        where: {
-                            commentId: value.id,
-                        }
-                    })
-                });
-
-                await db.comments.destroy({
-                    where: {
-                        videoId: videoId,
-                    }
-                });
-
-                let result = await db.videos.destroy({
-                    where: {
-                        id: videoId,
-                    }
-                });
-
-                return result;
-
             }
-            else {
-                await db.comments.destroy({
-                    where: {
-                        videoId: videoId,
-                    }
-                });
-
-                let result = await db.videos.destroy({
-                    where: {
-                        id: videoId,
-                    }
-                });
-
-                return result;
-            }
+            await db.responseComments.destroy(options);
+            await db.comments.destroy(options);
+            let result = await db.videos.destroy({
+                where: {
+                    id: videoId,
+                },
+            })
+            return result;
         }
         catch (err) {
             throw err;

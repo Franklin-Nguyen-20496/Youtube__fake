@@ -10,6 +10,7 @@ export interface comment {
 
 export interface responseComment {
     id: number;
+    videoId: number;
     authorId: number;
     commentId: number;
     content: string;
