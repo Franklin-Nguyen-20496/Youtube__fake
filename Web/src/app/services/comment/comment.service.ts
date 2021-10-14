@@ -18,7 +18,7 @@ export class CommentService {
     private apiResponseCommentURL: string =
         'http://localhost:3004/responseComments';
 
-    constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) { }
 
     getCommentByID(id: number): Observable<comment> {
         const url = `${this.apiCommentURL}/${id}`;
@@ -62,5 +62,15 @@ export class CommentService {
 
     handleWhenGetResponseComment(): Observable<any> {
         return this.subject.asObservable();
+    }
+
+    deleteComment(id: number): Observable<any> {
+        const url = `${this.apiCommentURL}/${id}`;
+        return this.http.delete(url);
+    }
+
+    deleteResponseComment(id: number): Observable<any> {
+        const url = `${this.apiResponseCommentURL}/${id}`;
+        return this.http.delete(url);
     }
 }

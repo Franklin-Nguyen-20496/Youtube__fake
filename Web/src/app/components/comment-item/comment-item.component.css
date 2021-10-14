@@ -50,3 +50,12 @@
 .response__container .container__control i {
     margin: 0 8px 0 0;
 }
+
+.btn__setting {
+    position: relative;
+}
+
+.btn__setting .setting__items {
+    position: absolute;
+    right: 0;
+}

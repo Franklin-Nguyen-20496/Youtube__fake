@@ -11,13 +11,11 @@ export class SelectItemComponent implements OnInit {
     @Input() icon: string = 'fas fa-home';
     @Input() title: string = 'Trang chủ';
     @Input() color: string = '#909090';
-    // @Input() id: string = '';
+    @Output() click: EventEmitter<any> = new EventEmitter();
 
     isMousedown: boolean = false;
     bgColor: string = '#212121';
     event?: any;
-
-    @Output() itemClick: EventEmitter<any> = new EventEmitter();
 
     constructor(private buttonIconService: ButtonIconService) {
         this.buttonIconService.handleEventMouseUp().subscribe((value) => {
@@ -25,10 +23,10 @@ export class SelectItemComponent implements OnInit {
         });
     }
 
-    ngOnInit(): void {}
+    ngOnInit(): void { }
 
     selected(): void {
-        this.itemClick.emit();
+        this.click.emit();
     }
 
     onMousedown(): void {

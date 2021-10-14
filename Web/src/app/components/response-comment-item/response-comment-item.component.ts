@@ -3,6 +3,9 @@ import { comment, responseComment } from '../../Model/comment/comment';
 import { CommentService } from '../../services/comment/comment.service';
 import { UsersService } from '../../services/users/users.service';
 import { USER } from '../../Model/User/user';
+import { NotifyService } from '../../services/notify/notify.service';
+import { UiService } from '../../services/ui/ui.service';
+import { AuthorService } from '../../services/auth/author.service';
 
 @Component({
     selector: 'app-response-comment-item',
@@ -45,10 +48,17 @@ export class ResponseCommentItemComponent implements OnInit {
     totalLike: number = 0;
     isLike: boolean = false;
     isUnlike: boolean = false;
+    isShowConfirm: boolean = false;
+    isAuth: boolean = false;
+    isShowSetting: boolean = false;
+    isShowResponseComment: boolean = true;
 
     constructor(
         private commentService: CommentService,
         private usersService: UsersService,
+        private authorService: AuthorService,
+        private notifyService: NotifyService,
+        private uiService: UiService,
     ) { }
 
     ngOnInit(): void {
@@ -57,6 +67,17 @@ export class ResponseCommentItemComponent implements OnInit {
             .subscribe((user) => {
                 this.user = user;
             });
+        // handle hide setting comment
+        this.uiService.handleSettingComment().subscribe((value) => {
+            this.isShowSetting = value;
+        })
+
+        // get auth
+        this.authorService.getAccountWhenReload().subscribe(auth => {
+            if (auth.authorId === this.responseComment.authorId) {
+                this.isAuth = true;
+            }
+        })
     }
 
     onMouseover() {
@@ -101,5 +122,35 @@ export class ResponseCommentItemComponent implements OnInit {
 
     getHideInputForm(value: boolean) {
         this.isShowResponseCommentInput = value;
+    }
+
+    // setting comment
+    confirmAction(): void {
+        this.isShowConfirm = false;
+        if (this.isAuth === true) {
+            this.commentService.deleteResponseComment(this.responseComment.id).subscribe((result) => {
+                if (typeof (result) !== 'string') {
+                    this.isShowResponseComment = false;
+                    this.notifyService.setNotify('Đã xóa bình luận !');
+                }
+            });
+
+        }
+        else {
+            this.notifyService.setNotify('Đã gửi báo cáo!');
+        }
+    }
+
+    toggleShowSetting() {
+        this.isShowSetting = !this.isShowSetting;
+    }
+
+    ShowConfirm() {
+        this.isShowConfirm = true;
+        this.isShowSetting = false;
+    }
+
+    cancelConfirmAction() {
+        this.isShowConfirm = false;
     }
 }

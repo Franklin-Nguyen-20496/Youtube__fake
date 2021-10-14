@@ -1,0 +1,55 @@
+<div class="confirm-action" (click)="$event.stopPropagation()">
+    <div class="confirm__background">
+        <div class="confirm__container" [ngStyle]="{ width: isAuth ? '300px' : '450px' }">
+            <div class="confirm__content">
+                <div class="confirm__header">
+                    <p>{{isAuth ? 'Xóa bình luận' : 'Báo bình luận vi phạm'}}</p>
+                </div>
+                <div class="content__normal" *ngIf="!isAuth">
+
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="reportComment" id="1">
+                        <label class="form-check-label" for="1">
+                            Bình luận có nội dung không thích hợp hoặc nội dung quảng cáo không mong muốn
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="reportComment" id="2">
+                        <label class="form-check-label" for="2">
+                            Tài liệu khiêu dâm hoặc phim khiêu dâm
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="reportComment" id="3">
+                        <label class="form-check-label" for="3">
+                            Xâm hại trẻ em
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="reportComment" id="4">
+                        <label class="form-check-label" for="4">
+                            Lời nói căm thù hoặc hình ảnh bạo lực
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="reportComment" id="5">
+                        <label class="form-check-label" for="5">
+                            Quấy rối hoặc bắt nạt
+                        </label>
+                    </div>
+                </div>
+                <div *ngIf="isAuth" class="content__auth">
+                    <p>Xóa bình luận của bạn vĩnh viễn ?</p>
+                </div>
+            </div>
+            <div class="confirm__select">
+                <app-btn-normal name="HỦY" bgColor="#212121" (click)="CancelClick()"></app-btn-normal>
+
+                <app-btn-normal [name]="isAuth ? 'OK' : 'BÁO CÁO'" bgColor="#212121" (click)="confirmClick()">
+                </app-btn-normal>
+
+            </div>
+        </div>
+    </div>
+    <app-notify-request></app-notify-request>
+</div>

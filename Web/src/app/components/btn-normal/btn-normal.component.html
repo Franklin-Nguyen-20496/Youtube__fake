@@ -1,9 +1,3 @@
-<button
-    [ngStyle]="{ color: color, 'background-color': bgColor }"
-    (click)="btnClick()"
-    [type]="type"
-    [ngClass]="class"
-    (click)="$event.stopPropagation()"
->
+<button [ngStyle]="{ color: color, 'background-color': bgColor }" (click)="btnClick()" [type]="type" [ngClass]="class">
     {{ name }}
 </button>

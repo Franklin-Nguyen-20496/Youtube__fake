@@ -24,10 +24,7 @@
 
     <div class="body__container">
         <div *ngIf="hasRoute('/')">
-            <div
-                [ngStyle]="{ width: isShowNavbar ? '240px' : '72px' }"
-                class="fake__navbarXL d-none d-xl-block"
-            >
+            <div [ngStyle]="{ width: isShowNavbar ? '240px' : '72px' }" class="fake__navbarXL d-none d-xl-block">
                 <h3>fake__navbarXL</h3>
             </div>
 
@@ -38,18 +35,17 @@
 
         <div class="container__videos">
             <div *ngIf="hasRoute('/')" class="slide__fixed">
-                <div
-                    class="slide__container"
-                    [ngStyle]="{
+                <div class="slide__container" [ngStyle]="{
                         width: isShowNavbar
                             ? 'calc(100% - 240px)'
                             : 'calc(100% - 72px)'
-                    }"
-                >
+                    }">
                     <app-slide></app-slide>
                 </div>
             </div>
             <router-outlet></router-outlet>
         </div>
     </div>
+
+    <app-notify-request></app-notify-request>
 </div>

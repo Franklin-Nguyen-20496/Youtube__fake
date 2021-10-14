@@ -40,6 +40,7 @@ import { UserCustomsModule } from './page/user-customs/user-customs.module';
 import { LoggingComponent } from './page/logging/logging.component';
 import { UserCreateComponent } from './page/user-create/user-create.component';
 import { NotifyRequestComponent } from './components/notify-request/notify-request.component';
+import { ConfirmActionComponent } from './components/confirm-action/confirm-action.component';
 
 @NgModule({
     declarations: [
@@ -75,6 +76,7 @@ import { NotifyRequestComponent } from './components/notify-request/notify-reque
         LoggingComponent,
         UserCreateComponent,
         NotifyRequestComponent,
+        ConfirmActionComponent,
     ],
 
     // use HttpClientModule after BrowserModule

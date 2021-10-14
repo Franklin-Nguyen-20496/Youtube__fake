@@ -2,6 +2,9 @@ import { Component, OnInit, Input } from '@angular/core';
 import { comment, responseComment } from '../../Model/comment/comment';
 import { CommentService } from '../../services/comment/comment.service';
 import { UsersService } from '../../services/users/users.service';
+import { AuthorService } from '../../services/auth/author.service';
+import { NotifyService } from '../../services/notify/notify.service';
+import { UiService } from '../../services/ui/ui.service';
 import { USER } from '../../Model/User/user';
 import { NavigationExtras, Router } from '@angular/router';
 import * as $ from 'jquery';
@@ -29,6 +32,7 @@ export class CommentItemComponent implements OnInit {
     };
 
     isShowResponseCommentInput: boolean = false;
+    isShowComment: boolean = true;
     color: string = '#181818';
     staticColor: string = '#909090';
     bgColor: string = '#181818';
@@ -39,10 +43,16 @@ export class CommentItemComponent implements OnInit {
     length: number = 0;
     isResponseComment: boolean = false;
     isShowResponseComment: boolean = false;
+    isShowConfirm: boolean = false;
+    isAuth: boolean = false;
+    isShowSetting: boolean = false;
 
     constructor(
         private commentService: CommentService,
         private usersService: UsersService,
+        private authorService: AuthorService,
+        private notifyService: NotifyService,
+        private uiService: UiService,
     ) {
         this.commentService
             .handleWhenGetResponseComment()
@@ -58,6 +68,10 @@ export class CommentItemComponent implements OnInit {
                     }
                 }
             });
+        // handle hide setting comment
+        this.uiService.handleSettingComment().subscribe((value) => {
+            this.isShowSetting = value;
+        })
     }
 
     ngOnInit(): void {
@@ -79,6 +93,12 @@ export class CommentItemComponent implements OnInit {
             .subscribe((user) => {
                 this.user = user;
             });
+
+        this.authorService.getAccountWhenReload().subscribe(auth => {
+            if (auth.authorId === this.comment.authorId) {
+                this.isAuth = true;
+            }
+        })
     }
 
     onMouseover() {
@@ -133,5 +153,34 @@ export class CommentItemComponent implements OnInit {
             this.isShowResponseComment = false;
             this.responseControl = `Xem thêm ${this.length} câu trả lời`;
         }
+    }
+
+    // setting comment
+    confirmAction(): void {
+        this.isShowConfirm = false;
+        if (this.isAuth) {
+            this.commentService.deleteComment(this.comment.id).subscribe((result) => {
+                if (typeof (result) !== 'string') {
+                    this.isShowComment = false;
+                    this.notifyService.setNotify('Đã xóa bình luận !');
+                }
+            });
+        }
+        else {
+            this.notifyService.setNotify('Đã gửi báo cáo!');
+        }
+    }
+
+    toggleShowSetting() {
+        this.isShowSetting = !this.isShowSetting;
+    }
+
+    ShowConfirm() {
+        this.isShowConfirm = true;
+        this.isShowSetting = false;
+    }
+
+    cancelConfirmAction() {
+        this.isShowConfirm = false;
     }
 }

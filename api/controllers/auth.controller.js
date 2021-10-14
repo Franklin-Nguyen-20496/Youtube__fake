@@ -8,6 +8,7 @@ class AuthController {
                     id: 9,
                 }
             })
+            result = JSON.parse(JSON.stringify(result));
             return result;
         }
         catch (err) {
