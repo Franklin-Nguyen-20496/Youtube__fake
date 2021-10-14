@@ -69,6 +69,7 @@ export class AppComponent {
         this.uiService.getHideNavMenu();
         this.uiService.getHideNotify();
         this.uiService.getHideUserMenu();
+        this.uiService.getHideSettingComment();
         console.log('app click');
     }
 

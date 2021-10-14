@@ -4,6 +4,7 @@ import { USER } from '../../Model/User/user';
 import { UiService } from '../../services/ui/ui.service';
 import { CommentService } from '../../services/comment/comment.service';
 import { AuthorService } from '../../services/auth/author.service';
+import { NotifyService } from '../../services/notify/notify.service';
 
 @Component({
     selector: 'app-small-form-input',
@@ -36,6 +37,7 @@ export class SmallFormInputComponent implements OnInit {
         private uiService: UiService,
         private commentService: CommentService,
         private authorService: AuthorService,
+        private notifyService: NotifyService,
     ) {
         this.authorService.handleAccount().subscribe((auth) => {
             this.user = {
@@ -95,6 +97,7 @@ export class SmallFormInputComponent implements OnInit {
                 .createResponseComment(this.responseComment)
                 .subscribe((value) => {
                     this.commentService.getResponseComment(value);
+                    this.notifyService.setNotify('Đã lưu bình luận!');
                 });
 
             this.content = '';

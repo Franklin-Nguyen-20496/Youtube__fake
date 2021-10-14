@@ -36,3 +36,12 @@
 .item__content .item__btn .btn__item{
     margin: 0 4px 0 0;
 }
+
+.btn__setting {
+    position: relative;
+}
+
+.btn__setting .setting__items {
+    position: absolute;
+    right: 0;
+}

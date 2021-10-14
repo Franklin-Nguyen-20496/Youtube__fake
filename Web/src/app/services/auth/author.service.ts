@@ -13,7 +13,7 @@ const httpOptions = {
     providedIn: 'root',
 })
 export class AuthorService {
-    constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) { }
 
     private auth: AUTH = {
         id: 1,

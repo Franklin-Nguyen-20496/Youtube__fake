@@ -4,7 +4,8 @@ class UserController {
     async getAll() {
         try {
             let result = await db.users.findAll();
-            return result;
+            result = JSON.parse(JSON.stringify(result));
+            return result;;
         }
         catch (err) {
             throw err;
@@ -16,6 +17,7 @@ class UserController {
             let result = await db.users.findOne({
                 where: { id: id }
             });
+            result = JSON.parse(JSON.stringify(result));
             return result;
         }
         catch (err) {
@@ -36,6 +38,7 @@ class UserController {
             }
             else {
                 let result = await db.users.create(user);
+                result = JSON.parse(JSON.stringify(result));
                 return result;
             }
         }
@@ -70,6 +73,7 @@ class UserController {
                     }
                 })
                 console.log('data', data);
+                result = JSON.parse(JSON.stringify(result));
                 return result;
             }
         }

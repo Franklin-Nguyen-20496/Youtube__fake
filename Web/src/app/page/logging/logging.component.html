@@ -2,26 +2,14 @@
     <form class="form__logging" (ngSubmit)="OnSubmit()">
         <div class="mb-3">
             <label for="name__acc" class="form-label">User name :</label>
-            <input
-                type="text"
-                [(ngModel)]="user.name"
-                name="user.name"
-                class="form-control bg-dark text-white"
-                id="name__acc"
-                placeholder="user"
-            />
+            <input type="text" [(ngModel)]="user.name" name="user.name" class="form-control bg-dark text-white"
+                id="name__acc" placeholder="user" />
         </div>
 
         <div class="mb-3">
             <label for="name__pass" class="form-label">Password :</label>
-            <input
-                type="password"
-                [(ngModel)]="user.password"
-                name="user.password"
-                class="form-control bg-dark text-white"
-                id="name__pass"
-                placeholder="password"
-            />
+            <input type="password" [(ngModel)]="user.password" name="user.password"
+                class="form-control bg-dark text-white" id="name__pass" placeholder="password" />
         </div>
 
         <div class="logging__btn">
@@ -41,5 +29,4 @@
         </div>
     </form>
 
-    <app-notify-request></app-notify-request>
 </div>

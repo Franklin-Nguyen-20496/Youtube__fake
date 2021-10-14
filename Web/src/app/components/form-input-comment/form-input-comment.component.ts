@@ -3,6 +3,7 @@ import { USER } from '../../Model/User/user';
 import { comment, responseComment } from '../../Model/comment/comment';
 import { CommentService } from '../../services/comment/comment.service';
 import { AuthorService } from '../../services/auth/author.service';
+import { NotifyService } from '../../services/notify/notify.service';
 import * as $ from 'jquery';
 
 @Component({
@@ -34,6 +35,7 @@ export class FormInputCommentComponent implements OnInit {
     constructor(
         private commentService: CommentService,
         private authorService: AuthorService,
+        private notifyService: NotifyService,
     ) {
         this.authorService.handleAccount().subscribe((auth) => {
             this.user = {
@@ -91,6 +93,7 @@ export class FormInputCommentComponent implements OnInit {
                 .createComment(this.comment)
                 .subscribe((value) => {
                     this.click.emit(value);
+                    this.notifyService.setNotify('Đã lưu bình luận!');
                 });
             this.content = '';
             this.canSubmit = false;

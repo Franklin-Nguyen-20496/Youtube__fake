@@ -1,0 +1,39 @@
+.confirm-action {
+    position: relative;
+}
+
+.confirm-action .confirm__background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-action .confirm__container {
+    background-color: #212121;
+    margin: 0 0 120px 0;
+}
+
+.confirm-action .confirm__content {
+    border-bottom: 1px solid #323232;
+    padding: 24px 8px 8px 24px;
+}   
+
+.confirm-action .confirm__select {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+}   
+
+.confirm-action .confirm__header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+

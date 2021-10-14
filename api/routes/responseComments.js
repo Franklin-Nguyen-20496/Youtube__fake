@@ -26,11 +26,18 @@ class Router {
                 })
         })
 
-        router.route('/:id').delete((req, res) => {
-        })
-
         router.route('/find').get((req, res) => {
             return responseCommentsController.getResponseCommentsForComment(req.query.commentId)
+                .then((result) => {
+                    res.json(result);
+                })
+                .catch(err => {
+                    res.json(err);
+                })
+        })
+
+        router.route('/:id').delete((req, res) => {
+            return responseCommentsController.deleteResponseComment(req.params.id)
                 .then((result) => {
                     res.json(result);
                 })

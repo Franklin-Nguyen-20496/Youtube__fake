@@ -5,7 +5,7 @@ import { Observable, Subject } from 'rxjs';
     providedIn: 'root',
 })
 export class UiService {
-    constructor() {}
+    constructor() { }
 
     private isShowLeftbar?: boolean;
     private subject: Subject<any> = new Subject();
@@ -27,6 +27,9 @@ export class UiService {
 
     private isShowResponseCommentInput!: boolean;
     private subject7: Subject<boolean> = new Subject();
+
+    private isResetAllSettingComment!: boolean;
+    private subject8: Subject<boolean> = new Subject();
 
     getShowLeftbar(): void {
         this.isShowLeftbar = true;
@@ -162,6 +165,9 @@ export class UiService {
 
         this.isShowUserMenu = false;
         this.subject5.next(this.isShowUserMenu);
+
+        this.isResetAllSettingComment = false;
+        this.subject8.next(this.isResetAllSettingComment);
     }
 
     // navbar trang chủ
@@ -188,4 +194,17 @@ export class UiService {
     handleResponseCommentInput(): Observable<boolean> {
         return this.subject7.asObservable();
     }
+
+    // Handle setting comment
+
+    getHideSettingComment() {
+        this.isResetAllSettingComment = false;
+        this.subject8.next(this.isResetAllSettingComment);
+    }
+
+    handleSettingComment(): Observable<boolean> {
+        return this.subject8.asObservable();
+    }
+
+
 }

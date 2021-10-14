@@ -4,6 +4,7 @@ class VideosController {
     async getAll() {
         try {
             let result = await db.videos.findAll();
+            result = JSON.parse(JSON.stringify(result));
             return result;
         }
         catch (err) {
@@ -16,6 +17,7 @@ class VideosController {
             let result = await db.videos.findOne({
                 where: { id: id }
             });
+            result = JSON.parse(JSON.stringify(result));
             return result;
         }
         catch (err) {
@@ -30,6 +32,7 @@ class VideosController {
                 return 'something wrong';
             }
             else {
+                result = JSON.parse(JSON.stringify(result));
                 return result;
             }
         }
@@ -45,6 +48,7 @@ class VideosController {
                     authorId: id,
                 }
             });
+            result = JSON.parse(JSON.stringify(result));
             return result;
         }
         catch (err) {
@@ -66,6 +70,7 @@ class VideosController {
                     id: videoId,
                 },
             })
+            result = JSON.parse(JSON.stringify(result));
             return result;
         }
         catch (err) {
