@@ -6,6 +6,7 @@
 
     background-color: #202020;
     animation: slideNotify ease 0.5s;
+    z-index: 100000000;
 }
 
 @keyframes slideNotify {

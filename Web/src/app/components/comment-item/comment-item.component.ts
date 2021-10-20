@@ -5,8 +5,8 @@ import { UsersService } from '../../services/users/users.service';
 import { AuthorService } from '../../services/auth/author.service';
 import { NotifyService } from '../../services/notify/notify.service';
 import { UiService } from '../../services/ui/ui.service';
+import { LocalStorageHelper } from '../../shared/local-storage-helper';
 import { USER } from '../../Model/User/user';
-import { NavigationExtras, Router } from '@angular/router';
 import * as $ from 'jquery';
 
 @Component({
@@ -27,8 +27,6 @@ export class CommentItemComponent implements OnInit {
         linkImg:
             'https://yt3.ggpht.com/yti/APfAmoEID-BpDbCQ3G_0FdDDkE8dd35BCMSac5pQgnhz=s88-c-k-c0x00ffffff-no-rj-mo',
         status: 1,
-        password: '123',
-        created: new Date(),
     };
 
     isShowResponseCommentInput: boolean = false;
@@ -50,7 +48,7 @@ export class CommentItemComponent implements OnInit {
     constructor(
         private commentService: CommentService,
         private usersService: UsersService,
-        private authorService: AuthorService,
+        private localStorageHelper: LocalStorageHelper,
         private notifyService: NotifyService,
         private uiService: UiService,
     ) {
@@ -94,11 +92,9 @@ export class CommentItemComponent implements OnInit {
                 this.user = user;
             });
 
-        this.authorService.getAccountWhenReload().subscribe(auth => {
-            if (auth.authorId === this.comment.authorId) {
-                this.isAuth = true;
-            }
-        })
+        if (this.comment.authorId === this.localStorageHelper.getUserInfo()) {
+            this.isAuth = true;
+        }
     }
 
     onMouseover() {

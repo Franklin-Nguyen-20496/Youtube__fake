@@ -26,7 +26,11 @@ class Router {
         })
 
         router.route('/account').post((req, res) => {
-            return userController.findOneAccount(req.body)
+            const authorization = req.header('authorization');
+            // res.json(authorization);
+            const email = authorization.split(':')[0];
+            const password = authorization.split(':')[1];
+            return userController.login(email, password)
                 .then((result) => {
                     res.json(result);
                 })

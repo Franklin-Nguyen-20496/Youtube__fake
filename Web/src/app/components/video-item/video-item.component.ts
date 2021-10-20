@@ -30,8 +30,6 @@ export class VideoItemComponent implements OnInit {
         linkImg:
             'https://yt3.ggpht.com/yti/APfAmoEID-BpDbCQ3G_0FdDDkE8dd35BCMSac5pQgnhz=s88-c-k-c0x00ffffff-no-rj-mo',
         status: 1,
-        password: '123',
-        created: new Date(),
     };
 
     subscribe: number = 0;
@@ -66,9 +64,9 @@ export class VideoItemComponent implements OnInit {
     }
 
     deleteVideo() {
-        this.videosService.deleteVideo(this.video.id).subscribe((value) => {
-            this.notDeleted = false;
-        });
+        // this.videosService.deleteVideo(this.video.id).subscribe((value) => {
+        //     this.notDeleted = false;
+        // });
     }
 
     watchVideo() {

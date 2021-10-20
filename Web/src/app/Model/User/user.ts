@@ -2,9 +2,7 @@ export interface USER {
     id: number;
     name: string;
     linkImg: string;
-    password: string;
     status: number;
-    created: Date;
 }
 
 // "id": 1,

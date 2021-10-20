@@ -1,4 +1,5 @@
 const db = require('../db');
+const jwtHelper = require('../shared/jwt/index')
 
 class UserController {
     async getAll() {
@@ -47,34 +48,26 @@ class UserController {
         }
     }
 
-    async findOneAccount(user) {
+    async login(email, password) {
         try {
-            let result = await db.users.findOne({
+            const result = await db.users.findOne({
+                attributes: ["id", "name", "linkImg", "status"],
                 where: {
-                    name: user.name,
-                    password: user.password,
+                    email: email,
+                    password: password,
                 }
             });
-
-            if (result === null) {
-                return 'no account found';
+            const user = JSON.parse(JSON.stringify(result));
+            if (!user) {
+                return "not exist user";
             }
             else {
-                const data = {
-                    authorId: result.id,
-                    name: result.name,
-                    linkImg: result.linkImg,
-                    password: result.password,
-                    status: result.status,
-                }
-                await db.auths.update(data, {
-                    where: {
-                        id: 9,
-                    }
-                })
-                console.log('data', data);
-                result = JSON.parse(JSON.stringify(result));
-                return result;
+                const u = {
+                    uid: user.id
+                };
+                const token = jwtHelper.setToken(u)
+                u.token = token;
+                return u;
             }
         }
         catch (err) {

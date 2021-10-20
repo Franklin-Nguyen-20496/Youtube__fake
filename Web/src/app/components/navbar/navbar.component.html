@@ -1,20 +1,15 @@
-<div id="leftbar__custom" (click)="$event.stopPropagation(); $event.preventDefault()">
+<div id="leftbar__custom" (click)="$event.stopPropagation()">
     <div id="leftbar__container" data-bs-spy="scroll" data-bs-offset="0" class="scrollspy-example" tabindex="0">
         <div class="left-bar__item">
-            <app-select-item (itemClick)="goHome()" title="Trang chủ"></app-select-item>
-            <a routerLink="/logging">
-                <app-select-item icon="fas fa-compass" title="Đăng nhập"></app-select-item>
-            </a>
+            <app-select-item (click)="goHome()" title="Trang chủ"></app-select-item>
 
-            <a routerLink="/user">
-                <app-select-item icon="fab fa-youtube" title="Tạo tài khoản"></app-select-item>
-            </a>
+            <app-select-item (click)="goUserLogin()" icon="fas fa-compass" title="Đăng nhập"></app-select-item>
+
+            <app-select-item (click)="goCreateUser()" icon="fab fa-youtube" title="Tạo tài khoản"></app-select-item>
         </div>
 
         <div class="left-bar__item">
-            <a routerLink="/videos/create">
-                <app-select-item icon="fas fa-book" title="Thêm videos"></app-select-item>
-            </a>
+            <app-select-item (click)="goCreateVideo()" icon="fas fa-book" title="Thêm videos"></app-select-item>
             <app-select-item icon="fas fa-history" title="Video đã xem"></app-select-item>
             <app-select-item icon="fas fa-play-circle" title="Video của bạn"></app-select-item>
             <app-select-item icon="far fa-clock" title="Xem sau"></app-select-item>
@@ -27,18 +22,17 @@
 
         <div class="left-bar__item">
             <p>KÊNH ĐĂNG KÝ</p>
-            <app-user-item *ngFor="let user of users1" [user]="user" (userClick)="UserClick(user)">
+            <app-user-item *ngFor="let user of users1" [user]="user">
             </app-user-item>
 
-            <div *ngIf="isUsers2">
-                <app-user-item *ngFor="let user of users2" [display]="display" [user]="user"
-                    (userClick)="UserClick(user)">
+            <div *ngIf="display">
+                <app-user-item *ngFor="let user2 of users2" [display]="display" [user]="user2">
                 </app-user-item>
             </div>
 
-            <div *ngIf="isUsers2">
+            <div *ngIf="isUsers2" (click)="toggleUsers2()">
                 <app-select-item [icon]="display ? 'fas fa-angle-up' : 'fas fa-angle-down'"
-                    [title]="display ? title1 : title2" (itemClick)="toggleUsers2()"></app-select-item>
+                    [title]="display ? title1 : title2"></app-select-item>
             </div>
         </div>
 

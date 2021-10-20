@@ -6,6 +6,7 @@ import { USER } from '../../Model/User/user';
 import { NotifyService } from '../../services/notify/notify.service';
 import { UiService } from '../../services/ui/ui.service';
 import { AuthorService } from '../../services/auth/author.service';
+import { LocalStorageHelper } from '../../shared/local-storage-helper';
 
 @Component({
     selector: 'app-response-comment-item',
@@ -25,21 +26,12 @@ export class ResponseCommentItemComponent implements OnInit {
     @Input() commentId!: number;
     @Input() videoId!: number;
 
-    // "id": 1,
-    // "authorId": 4,
-    // "commentId": 1,
-    // "content": "This is a response comments",
-    // "likes": 2,
-    // "created": "2021-10-06T00:41:13.000Z"
-
     user: USER = {
         id: 1,
         name: 'Hoàng',
         linkImg:
             'https://yt3.ggpht.com/yti/APfAmoEID-BpDbCQ3G_0FdDDkE8dd35BCMSac5pQgnhz=s88-c-k-c0x00ffffff-no-rj-mo',
         status: 1,
-        password: '123',
-        created: new Date(),
     };
     isShowResponseCommentInput: boolean = false;
     color: string = '#181818';
@@ -56,7 +48,7 @@ export class ResponseCommentItemComponent implements OnInit {
     constructor(
         private commentService: CommentService,
         private usersService: UsersService,
-        private authorService: AuthorService,
+        private localStorageHelper: LocalStorageHelper,
         private notifyService: NotifyService,
         private uiService: UiService,
     ) { }
@@ -72,12 +64,9 @@ export class ResponseCommentItemComponent implements OnInit {
             this.isShowSetting = value;
         })
 
-        // get auth
-        this.authorService.getAccountWhenReload().subscribe(auth => {
-            if (auth.authorId === this.responseComment.authorId) {
-                this.isAuth = true;
-            }
-        })
+        if (this.responseComment.authorId === this.localStorageHelper.getUserInfo()) {
+            this.isAuth = true;
+        }
     }
 
     onMouseover() {

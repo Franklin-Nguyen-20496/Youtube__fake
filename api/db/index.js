@@ -33,7 +33,7 @@ class Db {
 			.then(() => {
 				console.log("sequelize authenticated");
 				// return sequelize;
-				return sequelize.sync()
+				return sequelize.sync() // {force: true} => reset DB
 					.then(() => {
 						console.log('sequelize synced');
 						return sequelize;
@@ -73,17 +73,18 @@ class Db {
 
 	async initData() {
 		console.log('initData');
-		const numberOfUser = await this.auths.count({});
+		const numberOfUser = await this.users.count({});
 		console.log('numberOfUser', numberOfUser);
 		if (numberOfUser === 0) {
 			const user = {
 				authorId: 1,
 				name: 'Hoàng Nguyễn',
+				email: 'hoangnguyen@gmail.com',
 				linkImg: 'https://yt3.ggpht.com/yti/APfAmoEID-BpDbCQ3G_0FdDDkE8dd35BCMSac5pQgnhz=s88-c-k-c0x00ffffff-no-rj-mo',
 				status: 1,
 				password: '123456',
 			};
-			this.auths.create(user);
+			this.users.create(user);
 		}
 	}
 }

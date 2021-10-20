@@ -1,8 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { AUTH } from '../../Model/auth/auth';
+import { USER } from '../../Model/User/user';
 import { UsersService } from '../../services/users/users.service';
-import { AuthorService } from '../../services/auth/author.service';
-import { data } from 'jquery';
+import { LocalStorageHelper } from '../../shared/local-storage-helper';
 
 @Component({
     selector: 'app-user-btn',
@@ -10,32 +9,31 @@ import { data } from 'jquery';
     styleUrls: ['./user-btn.component.css'],
 })
 export class UserBtnComponent implements OnInit {
-    @Output() userClick: EventEmitter<AUTH> = new EventEmitter();
+    @Output() userClick: EventEmitter<USER> = new EventEmitter();
 
-    auth: AUTH = {
+    auth: USER = {
         id: 1,
-        authorId: 1,
         name: 'Hoàng Nguyễn',
-        linkImg:
-            'https://yt3.ggpht.com/yti/APfAmoEID-BpDbCQ3G_0FdDDkE8dd35BCMSac5pQgnhz=s88-c-k-c0x00ffffff-no-rj-mo',
-        password: '123456',
+        linkImg: '',
         status: 1,
-        created: new Date(),
     };
 
     constructor(
         private usersService: UsersService,
-        private authorService: AuthorService,
+        private localStorageHelper: LocalStorageHelper,
     ) {
-        this.authorService.handleAccount().subscribe((auth) => {
-            this.auth = auth;
-        });
+        this.localStorageHelper.handleUserInfoWhenLogin().subscribe((id) => {
+            this.usersService.getUserByID(id).subscribe((auth) => {
+                this.auth = auth;
+            })
+        })
     }
 
     ngOnInit(): void {
-        this.authorService.getAccountWhenReload().subscribe((auth) => {
+        const authId = this.localStorageHelper.getUserInfo();
+        this.usersService.getUserByID(authId).subscribe((auth) => {
             this.auth = auth;
-        });
+        })
     }
 
     btnClick() {

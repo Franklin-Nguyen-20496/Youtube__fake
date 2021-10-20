@@ -8,6 +8,10 @@ class Schema {
         primaryKey: true,
         field: 'id',
       },
+      email: {
+        type: DataTypes.STRING,
+        unique: true,
+      },
       name: {
         type: DataTypes.STRING
       },

@@ -3,28 +3,20 @@
         <div class="d-block d-lg-flex">
             <div class="video__container">
                 <div class="video__wrapper">
-                    <iframe
-                        width="560"
-                        height="315"
-                        src=""
-                        title="YouTube video player"
-                        frameborder="0"
+                    <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                    ></iframe>
+                        allowfullscreen></iframe>
                 </div>
                 <div class="video__content">
                     <h4 class="video__name">{{ video.name }}</h4>
                     <div class="video__info">
                         <div class="info__view">
                             <p>55.732.893 lượt xem</p>
-                            <i
-                                class="
+                            <i class="
                                     fas
                                     fa-circle
                                     d-none d-sm-block d-lg-none d-xl-block
-                                "
-                            ></i>
+                                "></i>
                             <p class="d-none d-sm-block d-lg-none d-xl-block">
                                 24 thg 9, 2021
                             </p>
@@ -33,93 +25,61 @@
                         <div class="info__public">
                             <div class="public__like">
                                 <div class="share__item">
-                                    <app-btn-icon
-                                        (iconClick)="toggleLike()"
-                                        icon="fas fa-thumbs-up"
-                                        bgColor="#181818"
-                                        [color]="isLike ? '#3ea6ff' : '#909090'"
-                                    ></app-btn-icon>
-                                    <p
-                                        (click)="toggleLike()"
-                                        [ngStyle]="{
+                                    <app-btn-icon (iconClick)="toggleLike()" icon="fas fa-thumbs-up" bgColor="#181818"
+                                        [color]="isLike ? '#3ea6ff' : '#909090'"></app-btn-icon>
+                                    <p (click)="toggleLike()" [ngStyle]="{
                                             color: isLike
                                                 ? '#3ea6ff'
                                                 : '#909090'
-                                        }"
-                                    >
+                                        }">
                                         39 N
                                     </p>
                                 </div>
                                 <div class="share__item">
-                                    <app-btn-icon
-                                        (iconClick)="toggleUnlike()"
-                                        icon="fas fa-thumbs-down"
-                                        bgColor="#181818"
-                                        [color]="
+                                    <app-btn-icon (iconClick)="toggleUnlike()" icon="fas fa-thumbs-down"
+                                        bgColor="#181818" [color]="
                                             isUnlike ? '#3ea6ff' : '#909090'
-                                        "
-                                    ></app-btn-icon>
-                                    <p
-                                        (click)="toggleUnlike()"
-                                        [ngStyle]="{
+                                        "></app-btn-icon>
+                                    <p (click)="toggleUnlike()" [ngStyle]="{
                                             color: isUnlike
                                                 ? '#3ea6ff'
                                                 : '#909090'
-                                        }"
-                                    >
+                                        }">
                                         1.6 N
                                     </p>
                                 </div>
 
                                 <div class="feel__custom">
-                                    <div
-                                        [ngStyle]="{
+                                    <div [ngStyle]="{
                                             width: widthLike,
                                             'background-color': isLike
                                                 ? '#3ea6ff'
                                                 : '#909090'
-                                        }"
-                                        class="feel__like"
-                                    ></div>
+                                        }" class="feel__like"></div>
 
-                                    <div
-                                        [ngStyle]="{
+                                    <div [ngStyle]="{
                                             width: widthUnlike,
                                             'background-color': isUnlike
                                                 ? '#3ea6ff'
                                                 : '#606060'
-                                        }"
-                                        class="feel__unlike"
-                                    ></div>
+                                        }" class="feel__unlike"></div>
                                 </div>
                             </div>
 
                             <div class="public__share">
                                 <div class="share__item">
-                                    <app-btn-icon
-                                        icon="fas fa-share"
-                                        bgColor="#181818"
-                                        color="#909090"
-                                    ></app-btn-icon>
+                                    <app-btn-icon icon="fas fa-share" bgColor="#181818" color="#909090"></app-btn-icon>
                                     <p>CHIA SẺ</p>
                                 </div>
 
                                 <div class="share__item d-sm-none d-md-flex">
-                                    <app-btn-icon
-                                        icon="fas fa-folder-plus"
-                                        bgColor="#181818"
-                                        color="#909090"
-                                    >
+                                    <app-btn-icon icon="fas fa-folder-plus" bgColor="#181818" color="#909090">
                                     </app-btn-icon>
                                     <p>LƯU</p>
                                 </div>
 
                                 <div class="share__item">
-                                    <app-btn-icon
-                                        icon="fas fa-ellipsis-h"
-                                        bgColor="#181818"
-                                        color="#909090"
-                                    >
+                                    <app-btn-icon icon="fas fa-ellipsis-h" bgColor="#181818" color="#909090">
                                     </app-btn-icon>
                                 </div>
                             </div>
@@ -134,18 +94,11 @@
                         <p>{{ user.name }}</p>
                     </div>
                     <div class="user-infor__item">
-                        <app-btn-normal
-                            [name]="isSubscribe ? 'ĐÃ ĐĂNG KÝ' : 'ĐĂNG KÝ'"
-                            [color]="isSubscribe ? '#909090' : '#fff'"
-                            [bgColor]="isSubscribe ? '#303030' : '#cc0000'"
-                            (click)="toggleSubscribe()"
-                        ></app-btn-normal>
+                        <app-btn-normal [name]="isSubscribe ? 'ĐÃ ĐĂNG KÝ' : 'ĐĂNG KÝ'"
+                            [color]="isSubscribe ? '#909090' : '#fff'" [bgColor]="isSubscribe ? '#303030' : '#cc0000'"
+                            (click)="toggleSubscribe()"></app-btn-normal>
                         <div *ngIf="isSubscribe" class="item__notify">
-                            <app-btn-icon
-                                color="#909090"
-                                bgColor="#181818"
-                                icon="fas fa-bell"
-                            ></app-btn-icon>
+                            <app-btn-icon color="#909090" bgColor="#181818" icon="fas fa-bell"></app-btn-icon>
                         </div>
                     </div>
                 </div>
@@ -154,14 +107,11 @@
                 <div class="video__description">
                     <div class="description__unhide"></div>
 
-                    <div
-                        class="description__hide"
-                        [ngClass]="isHide ? 'd-block' : 'd-none'"
-                    ></div>
+                    <div class="description__hide" [ngClass]="isHide ? 'd-block' : 'd-none'"></div>
 
-                    <p class="button" (click)="toggleHide()">
+                    <!-- <p class="button" (click)="toggleHide()">
                         {{ isHide ? 'ẨN BỚT' : 'HIỆN THÊM' }}
-                    </p>
+                    </p> -->
                 </div>
 
                 <!-- comment -->

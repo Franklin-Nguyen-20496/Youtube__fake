@@ -1,13 +1,5 @@
-<div
-    class="select-item"
-    (mousedown)="onMousedown()"
-    (mouseup)="onMouseup()"
-    (mouseover)="onMouseover()"
-    (mouseout)="onMouseout()"
-    (click)="selected()"
-    [ngStyle]="{ 'background-color': bgColor }"
-    [title]="title"
->
+<div class="select-item" (mousedown)="onMousedown()" (mouseover)="onMouseover()" (mouseout)="onMouseout()"
+    (click)="selected()" [ngStyle]="{ 'background-color': bgColor }" [title]="title">
     <div>
         <i [ngStyle]="{ color: color }" [ngClass]="icon"></i>
     </div>

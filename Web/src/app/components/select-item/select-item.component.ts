@@ -27,20 +27,23 @@ export class SelectItemComponent implements OnInit {
 
     selected(): void {
         this.click.emit();
-    }
-
-    onMousedown(): void {
-        this.bgColor = 'rgb(163, 158, 158)';
-        $('.select-item').mousedown((event) => {
-            event.preventDefault();
-        });
-    }
-
-    onMouseup(): void {
         setTimeout(() => {
             this.bgColor = '#212121';
         }, 400);
     }
+
+    onMousedown(): void {
+        this.bgColor = 'rgb(163, 158, 158)';
+        // $('.select-item').mousedown((event) => {
+        //     event.preventDefault();
+        // });
+    }
+
+    // onMouseup(): void {
+    //     setTimeout(() => {
+    //         this.bgColor = '#212121';
+    //     }, 400);
+    // }
 
     onMouseover(): void {
         this.bgColor = '#383838';

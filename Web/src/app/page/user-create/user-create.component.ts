@@ -15,28 +15,31 @@ export class UserCreateComponent implements OnInit {
         name: '',
         linkImg: '',
         status: 1,
-        password: '',
-        created: new Date(),
     };
+
+    email: string = '';
+    password: string = '';
+
 
     constructor(
         private usersService: UsersService,
         private route: Router,
         private notifyService: NotifyService,
-    ) {}
+    ) { }
 
-    ngOnInit(): void {}
+    ngOnInit(): void { }
 
     onSubmit() {
         if (
             this.user.name != '' &&
             this.user.linkImg != '' &&
-            this.user.password != ''
+            this.password != ''
         ) {
             const user = {
                 name: this.user.name,
                 linkImg: this.user.linkImg,
-                password: this.user.password,
+                password: this.password,
+                email: this.email,
                 status: 1,
             };
 
@@ -53,7 +56,8 @@ export class UserCreateComponent implements OnInit {
 
                 this.user.name = '';
                 this.user.linkImg = '';
-                this.user.password = '';
+                this.password = '';
+                this.email = '';
             });
         } else {
             this.notifyService.setNotify('Vui lòng điền đầy đủ thông tin!');

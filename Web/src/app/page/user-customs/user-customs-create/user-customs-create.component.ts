@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { VIDEO } from '../../../Model/video/video';
 import { VideosService } from '../../../services/videos/videos.service';
-import { AuthorService } from '../../../services/auth/author.service';
 import { NotifyService } from '../../../services/notify/notify.service';
+import { LocalStorageHelper } from '../../../shared/local-storage-helper';
+import { UsersService } from '../../../services/users/users.service';
 
 @Component({
     selector: 'app-user-customs-create',
@@ -27,14 +28,18 @@ export class UserCustomsCreateComponent implements OnInit {
 
     constructor(
         private videosService: VideosService,
-        private authorService: AuthorService,
+        private usersService: UsersService,
+        private localStorageHelper: LocalStorageHelper,
+        private notifyService: NotifyService,
     ) {
-        this.authorService.getAccountWhenReload().subscribe((data) => {
-            this.authorId = data.authorId;
+        this.localStorageHelper.handleUserInfoWhenLogin().subscribe((id) => {
+            this.authorId = id;
         })
     }
 
-    ngOnInit(): void { }
+    ngOnInit(): void {
+        this.authorId = this.localStorageHelper.getUserInfo();
+    }
 
     onSubmit() {
         if (this.video.videoLink != null && this.video.name != null && this.video.img != null) {
@@ -53,9 +58,11 @@ export class UserCustomsCreateComponent implements OnInit {
             this.videosService.createVideo(video).subscribe((data) => {
                 if (typeof (data) === 'string') {
                     console.log('False to make video');
+                    this.notifyService.setNotify('Có lỗi khi tạo video!')
                 }
                 else {
                     console.log('Video created');
+                    this.notifyService.setNotify('Đã lưu video của bạn!!')
                 }
 
                 this.video.videoLink = '';

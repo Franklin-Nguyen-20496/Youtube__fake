@@ -3,6 +3,7 @@ import { USER } from '../../Model/User/user';
 import { AuthorService } from '../../services/auth/author.service';
 import { Router } from '@angular/router';
 import { NotifyService } from '../../services/notify/notify.service';
+import { LocalStorageHelper } from '../../shared/local-storage-helper';
 
 @Component({
     selector: 'app-logging',
@@ -10,55 +11,37 @@ import { NotifyService } from '../../services/notify/notify.service';
     styleUrls: ['./logging.component.css'],
 })
 export class LoggingComponent implements OnInit {
-    user: USER = {
-        id: 1,
-        name: '',
-        linkImg: '',
-        status: 1,
-        password: '',
-        created: new Date(),
-    };
+    email: string = '';
+    password: string = '';
 
     constructor(
         private authorService: AuthorService,
         private route: Router,
         private notifyService: NotifyService,
+        private localStorageHelper: LocalStorageHelper,
     ) { }
 
     ngOnInit(): void { }
 
     OnSubmit() {
-        if (this.user.name != '' && this.user.password != '') {
-            const account = {
-                name: this.user.name,
-                password: this.user.password,
-            };
+        if (this.email != '' && this.password != '') {
+            console.log(this.email, this.password);
 
-            this.authorService.getAccount(account).subscribe((value) => {
-                if (typeof value === 'string') {
-                    // this.route.navigate(['/logging']);
-                    this.notifyService.setNotify(
-                        'Tài khoản hoặc mật khẩu không đúng!',
-                    );
-                } else {
-                    const auth = {
-                        id: 1,
-                        authorId: value.id,
-                        name: value.name,
-                        linkImg: value.linkImg,
-                        password: value.password,
-                        status: 1,
-                        created: new Date(),
-                    };
-
-                    this.authorService.saveAccount(auth);
-                    this.route.navigate(['/']);
-                    // this.authorService.saveAccount(value);
+            this.authorService.loginWithEmailAndPassword(this.email, this.password).subscribe((result) => {
+                console.log('result', result);
+                if (typeof result === 'string') {
+                    this.notifyService.setNotify('Tài khoản hoặc mật khẩu không tồn tại!!!');
                 }
-            });
+                else {
+                    this.localStorageHelper.setUserInfo(result.uid);
+                    this.localStorageHelper.setLoginInfo(result.token);
+                    this.notifyService.setNotify('Đăng nhập thành công!');
+                    this.route.navigate(['/']);
+                }
+            })
 
-            this.user.name = '';
-            this.user.password = '';
+            this.email = '';
+            this.password = '';
         }
         else {
             this.notifyService.setNotify(

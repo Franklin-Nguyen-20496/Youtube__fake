@@ -14,8 +14,6 @@ export class UserItemComponent implements OnInit {
         linkImg:
             'https://yt3.ggpht.com/yti/APfAmoEID-BpDbCQ3G_0FdDDkE8dd35BCMSac5pQgnhz=s88-c-k-c0x00ffffff-no-rj-mo',
         status: 1,
-        password: '123',
-        created: new Date(),
     };
     @Input() display: boolean = true;
 
@@ -25,7 +23,7 @@ export class UserItemComponent implements OnInit {
     fontsize?: string;
     bgColor?: string;
 
-    constructor() {}
+    constructor() { }
 
     ngOnInit(color?: string, fontsize?: number) {
         if (this.user.status === 2) {

@@ -4,6 +4,8 @@ import { comment, responseComment } from '../../Model/comment/comment';
 import { CommentService } from '../../services/comment/comment.service';
 import { AuthorService } from '../../services/auth/author.service';
 import { NotifyService } from '../../services/notify/notify.service';
+import { LocalStorageHelper } from '../../shared/local-storage-helper';
+import { UsersService } from '../../services/users/users.service';
 import * as $ from 'jquery';
 
 @Component({
@@ -19,8 +21,6 @@ export class FormInputCommentComponent implements OnInit {
         linkImg:
             'https://yt3.ggpht.com/yti/APfAmoEID-BpDbCQ3G_0FdDDkE8dd35BCMSac5pQgnhz=s88-c-k-c0x00ffffff-no-rj-mo',
         status: 1,
-        password: '123',
-        created: new Date(),
     };
     @Input() commentId!: number;
     @Input() videoId!: number;
@@ -34,32 +34,22 @@ export class FormInputCommentComponent implements OnInit {
 
     constructor(
         private commentService: CommentService,
-        private authorService: AuthorService,
+        private localStorageHelper: LocalStorageHelper,
         private notifyService: NotifyService,
+        private usersService: UsersService,
     ) {
-        this.authorService.handleAccount().subscribe((auth) => {
-            this.user = {
-                id: auth.authorId,
-                name: auth.name,
-                linkImg: auth.linkImg,
-                status: auth.status,
-                password: auth.password,
-                created: auth.created,
-            };
-        });
+        this.localStorageHelper.handleUserInfoWhenLogin().subscribe((id) => {
+            this.usersService.getUserByID(id).subscribe((user) => {
+                this.user = user;
+            })
+        })
     }
 
     ngOnInit(): void {
-        this.authorService.getAccountWhenReload().subscribe((auth) => {
-            this.user = {
-                id: auth.authorId,
-                name: auth.name,
-                linkImg: auth.linkImg,
-                status: auth.status,
-                password: auth.password,
-                created: auth.created,
-            };
-        });
+        const authId = this.localStorageHelper.getUserInfo();
+        this.usersService.getUserByID(authId).subscribe((user) => {
+            this.user = user;
+        })
     }
 
     Onchange() {

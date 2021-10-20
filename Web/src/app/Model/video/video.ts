@@ -1,4 +1,3 @@
-import { USER } from '../User/user';
 
 export interface VIDEO {
     id: number;

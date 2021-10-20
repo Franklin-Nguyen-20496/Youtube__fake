@@ -22,7 +22,6 @@ export class UserCustomsListComponent implements OnInit {
 
     ngOnInit(): void {
         this.authorService.getAccountWhenReload().subscribe((data) => {
-            this.authorId = data.authorId;
 
             this.videosService.getVideosByUser(this.authorId).subscribe((videos) => {
                 this.videos = videos;

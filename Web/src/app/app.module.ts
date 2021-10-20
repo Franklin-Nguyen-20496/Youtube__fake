@@ -41,6 +41,7 @@ import { LoggingComponent } from './page/logging/logging.component';
 import { UserCreateComponent } from './page/user-create/user-create.component';
 import { NotifyRequestComponent } from './components/notify-request/notify-request.component';
 import { ConfirmActionComponent } from './components/confirm-action/confirm-action.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
     declarations: [
@@ -88,10 +89,11 @@ import { ConfirmActionComponent } from './components/confirm-action/confirm-acti
         NgbModule,
         FormsModule,
         UserCustomsModule,
+        SharedModule,
     ],
 
     // enableTracing: true help you debug routing
     providers: [],
     bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

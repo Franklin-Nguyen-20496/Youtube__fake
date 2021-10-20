@@ -63,6 +63,7 @@
 
 .video__name {
     display: flex;
+    flex: 1;
 }
 
 .video__name .description {

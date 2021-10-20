@@ -1,3 +1,9 @@
 {
-    
+    "router_root": "/api",
+    "SECRET_KEY": "secret_key",
+    "SECRET_VALUE": "8HFsEl6dfiurgfr7f4rffnI6Z1wP",
+    "SHA1_KEY": "vfiugfbdlijhdtjgkfdnhgifngifv84rrfn",
+    "PRIVATE_KEY": "AUUdziRtFU",
+    "TOKEN_KEY": "x-token",
+    "TOKEN_EXPIRESIN": "7d"
 }

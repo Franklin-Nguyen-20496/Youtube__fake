@@ -1,16 +1,8 @@
-<div
-    class="watch__item"
-    *ngIf="user$ | async as user"
-    (click)="$event.stopPropagation()"
->
+<div class="watch__item" *ngIf="user$ | async as user" (click)="$event.stopPropagation()">
     <div class="item__img">
         <img [src]="video.img" [alt]="video.name" />
     </div>
-    <div
-        class="video__name"
-        (mouseover)="onMouseover()"
-        (mouseleave)="onMouseleave()"
-    >
+    <div class="video__name" (mouseover)="onMouseover()" (mouseleave)="onMouseleave()">
         <!-- <img [src]="user.linkImg" [alt]="user.name" /> -->
         <div class="description">
             <div class="name">
@@ -26,11 +18,7 @@
             </div>
         </div>
         <div class="name__btn">
-            <app-btn-icon
-                icon="fas fa-ellipsis-v"
-                [color]="color"
-                bgColor="#181818"
-            ></app-btn-icon>
+            <app-btn-icon icon="fas fa-ellipsis-v" [color]="color" bgColor="#181818"></app-btn-icon>
         </div>
     </div>
 </div>

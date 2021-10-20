@@ -19,11 +19,9 @@ export class CommentComponent implements OnInit {
         linkImg:
             'https://yt3.ggpht.com/yti/APfAmoEID-BpDbCQ3G_0FdDDkE8dd35BCMSac5pQgnhz=s88-c-k-c0x00ffffff-no-rj-mo',
         status: 1,
-        password: '123',
-        created: new Date(),
     };
 
-    constructor(private commentService: CommentService) {}
+    constructor(private commentService: CommentService) { }
 
     ngOnInit(): void {
         this.commentService
